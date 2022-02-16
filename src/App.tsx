@@ -1,3 +1,3 @@
 export function App() {
-  return <div>Gabriela Gutierrez</div>;
+  return <div>Gabriela Gutierrez</div>
 }
