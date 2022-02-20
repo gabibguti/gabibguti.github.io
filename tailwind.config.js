@@ -7,6 +7,10 @@ module.exports = {
       ...theme('colors'),
       'light-blue': '#A6CFD5',
     }),
+    gradientColorStops: (theme) => ({
+      ...theme('colors'),
+      'light-blue': '#A6CFD5',
+    }),
   },
   variants: {
     extend: {},
