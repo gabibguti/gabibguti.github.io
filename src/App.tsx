@@ -4,8 +4,13 @@ import { IconGitHub } from './assets/IconGitHub'
 export function App(): ReactElement {
   return (
     <div className="bg-gradient-to-r from-light-blue to-dark-cornflower-blue flex flex-col w-screen h-screen">
-      <div className="flex flex-row p-4 justify-end text-xiketic fill-current">
-        <IconGitHub />
+      <div className="flex flex-row p-4 justify-end ">
+        <a
+          className="text-xiketic fill-current"
+          href="https://github.com/gabibguti"
+        >
+          <IconGitHub />
+        </a>
       </div>
       <div className="flex flex-col text-center justify-center items-center h-full">
         <span className="text-5xl font-bold text-xiketic">
