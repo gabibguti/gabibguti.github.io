@@ -11,6 +11,10 @@ module.exports = {
       ...theme('colors'),
       'light-blue': '#A6CFD5',
     }),
+    textColor: (theme) => ({
+      ...theme('colors'),
+      xiketic: '#0D0221',
+    }),
   },
   variants: {
     extend: {},
