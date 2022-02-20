@@ -5,8 +5,8 @@ import { IconLinkedIn } from './assets/IconLinkedIn'
 export function App(): ReactElement {
   return (
     <div className="bg-gradient-to-r from-light-blue to-dark-cornflower-blue flex flex-col w-screen h-screen">
-      <div className="flex flex-row p-4 justify-end">
-        <div className="grid grid-flow-col grid-cols-2 gap-2 text-xiketic fill-current">
+      <div className="flex flex-row px-6 py-4 justify-end">
+        <div className="grid grid-flow-col grid-cols-2 gap-3 text-xiketic fill-current">
           <a href="https://github.com/gabibguti">
             <IconGitHub />
           </a>
