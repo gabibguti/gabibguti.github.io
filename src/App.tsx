@@ -4,7 +4,7 @@ import { IconLinkedIn } from './assets/IconLinkedIn'
 
 export function App(): ReactElement {
   return (
-    <div className="bg-gradient-to-r from-dark-cornflower-blue to-light-blue flex flex-col w-screen h-screen">
+    <div className="bg-gradient-to-r from-aero-blue to-light-blue flex flex-col w-screen h-screen">
       <div className="flex flex-row px-6 py-4 justify-end">
         <div className="grid grid-flow-col grid-cols-2 gap-3">
           <a

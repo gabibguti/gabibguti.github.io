@@ -10,7 +10,7 @@ module.exports = {
     gradientColorStops: (theme) => ({
       ...theme('colors'),
       'light-blue': '#A6CFD5',
-      'dark-cornflower-blue': '#26408B',
+      'aero-blue': '#C2E7D9',
     }),
     textColor: (theme) => ({
       ...theme('colors'),
