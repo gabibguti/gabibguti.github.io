@@ -29,10 +29,13 @@ export function App(): ReactElement {
           Front-end developer
         </span>
         <span className="text-lg text-xiketic pt-10 max-w-2xl">
-          {`Hello there! I am a Software Engineer with experience in bringing UX designs to life.
-          Always dicussing the best user experience for the end users, focusing on the interaction design,
-          and combining the back-end development with the design ideas into amazing digital products!
-          I can also develop back-end APIs and I risk myself out, once in a while, in game development.`}
+          Hello there! I am a <b>Software Engineer</b> with experience in
+          bringing <b>UX designs</b> to life. Always dicussing the{' '}
+          <b>best user experience</b> for the end users, focusing on the{' '}
+          <b>interaction design</b>, and combining the back-end development with
+          design ideas into <b>amazing digital products</b>! I can also develop{' '}
+          <b>back-end APIs</b> and I risk myself out, once in a while, in{' '}
+          <b>game development</b>.
         </span>
       </div>
     </div>
