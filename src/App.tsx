@@ -28,6 +28,12 @@ export function App(): ReactElement {
         <span className="text-base font-light text-xiketic pt-4">
           Front-end developer
         </span>
+        <span className="text-lg text-xiketic pt-10 max-w-2xl">
+          {`Hello there! I am a Software Engineer with experience in bringing UX designs to life.
+          Always dicussing the best user experience for the end users, focusing on the interaction design,
+          and combining the back-end development with the design ideas into amazing digital products!
+          I can also develop back-end APIs and I risk myself out, once in a while, in game development.`}
+        </span>
       </div>
     </div>
   )
