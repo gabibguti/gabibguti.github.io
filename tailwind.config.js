@@ -3,10 +3,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {},
-    backgroundColor: (theme) => ({
-      ...theme('colors'),
-      'light-blue': '#A6CFD5',
-    }),
     gradientColorStops: (theme) => ({
       ...theme('colors'),
       'light-blue': '#A6CFD5',
