@@ -11,3 +11,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 $ yarn start
 
 ```
+
+### Links
+
+https://iconmonstr.com/
+https://open-meteo.com/en/docs#api_form
+https://v2.tailwindcss.com/docs/ major 2
