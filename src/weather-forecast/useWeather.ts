@@ -2,7 +2,12 @@ import { useQuery } from 'react-query'
 import { fetcher } from '../utils'
 
 interface CurrentWeather {
-  data?: { temperature?: number; temperatureUnit: string; windSpeed: number }
+  data?: {
+    temperature: number
+    temperatureUnit: string
+    windSpeed: number
+    time: string
+  }
 }
 
 interface OpenMeteoRes {
@@ -16,6 +21,7 @@ interface OpenMeteoRes {
   current_weather: {
     time: string
     windspeed: number
+    temperature: number
   }
 }
 
@@ -30,19 +36,15 @@ export function useWeather(): CurrentWeather {
     return {}
   }
 
-  const currentTime = data?.current_weather.time
+  const time = data?.current_weather.time
 
-  const currentTimeIndex = data?.hourly.time.findIndex(
-    (time) => time === currentTime
-  )
-
-  const currentTemperature = data?.hourly.temperature_2m.at(currentTimeIndex)
+  const temperature = data?.current_weather.temperature
 
   const temperatureUnit = data?.hourly_units.temperature_2m
 
   const windSpeed = data?.current_weather.windspeed
 
   return {
-    data: { temperature: currentTemperature, temperatureUnit, windSpeed },
+    data: { temperature, temperatureUnit, windSpeed, time },
   }
 }
