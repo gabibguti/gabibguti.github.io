@@ -3,6 +3,7 @@ import IconCloudy from '../assets/IconCloudy'
 import IconFire from '../assets/IconFire'
 import IconRain from '../assets/IconRain'
 import IconSun from '../assets/IconSun'
+import IconThunderstorm from '../assets/IconThunderstorm'
 
 function WeatherIcon({
   weatherCode,
@@ -31,6 +32,10 @@ function WeatherIcon({
     case 81:
     case 82:
       return <IconRain />
+    case 95:
+    case 96:
+    case 99:
+      return <IconThunderstorm />
     default:
       return null
   }
