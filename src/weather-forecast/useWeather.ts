@@ -6,7 +6,7 @@ interface CurrentWeather {
     temperature: number
     temperatureUnit: string
     windSpeed: number
-    time: string
+    time: Date
   }
 }
 
@@ -36,7 +36,7 @@ export function useWeather(): CurrentWeather {
     return {}
   }
 
-  const time = data?.current_weather.time
+  const time = new Date(data?.current_weather.time)
 
   const temperature = data?.current_weather.temperature
 

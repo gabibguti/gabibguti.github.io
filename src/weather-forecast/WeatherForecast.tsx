@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import { FormattedDate } from 'react-intl'
 import IconLocation from '../assets/IconLocation'
 import IconWind from '../assets/IconWind'
 import { useWeather } from './useWeather'
@@ -17,6 +18,17 @@ export function WeatherForecast(): ReactElement {
             <IconLocation />
           </span>
           {city}
+        </span>
+        <span className="flex flex-row font-light text-sm text-xiketic items-center pt-4">
+          <FormattedDate
+            value={data?.time}
+            year="numeric"
+            month="long"
+            day="2-digit"
+            hour="numeric"
+            minute="numeric"
+            hour12={true}
+          />
         </span>
         <span className="flex flex-row font-thin text-xiketic text-8xl py-6">
           {data?.temperature}&nbsp;{data?.temperatureUnit}

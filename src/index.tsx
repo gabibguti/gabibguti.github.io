@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { IntlProvider } from 'react-intl'
 import { QueryClient, QueryClientProvider } from 'react-query'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { App } from './App'
@@ -18,7 +19,9 @@ ReactDOM.render(
           path="/project/weather-forecast"
           element={
             <QueryClientProvider client={queryClient}>
-              <WeatherForecast />
+              <IntlProvider locale="en">
+                <WeatherForecast />
+              </IntlProvider>
             </QueryClientProvider>
           }
         />
