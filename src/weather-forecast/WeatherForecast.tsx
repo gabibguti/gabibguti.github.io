@@ -62,18 +62,27 @@ export function WeatherForecast(): ReactElement {
                 <th></th>
                 <th></th>
                 <th></th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
-              {data?.nextHoursForecast.map(({ time, temperature }, index) => (
-                <tr key={index}>
-                  <td className="text-right">{temperature}</td>
-                  <td>{data?.temperatureUnit}</td>
-                  <td className="text-right w-24">
-                    <FormattedTime value={time} />
-                  </td>
-                </tr>
-              ))}
+              {data?.nextHoursForecast.map(
+                ({ time, temperature, weatherCode }, index) => (
+                  <tr key={index}>
+                    <td className="text-right">{temperature}</td>
+                    <td>{data?.temperatureUnit}</td>
+                    <td className="px-4 h-5">
+                      <WeatherIcon
+                        weatherCode={weatherCode}
+                        temperature={temperature}
+                      />
+                    </td>
+                    <td className="text-right">
+                      <FormattedTime value={time} />
+                    </td>
+                  </tr>
+                )
+              )}
             </tbody>
           </table>
         </div>

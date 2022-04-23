@@ -4,6 +4,7 @@ import { fetcher } from '../utils'
 export interface HourlyWeather {
   temperature: number
   time: Date
+  weatherCode: number
 }
 
 interface CurrentWeather {
@@ -28,6 +29,7 @@ interface OpenMeteoRes {
   hourly: {
     temperature_2m: number[]
     time: string[]
+    weathercode: number[]
   }
   current_weather: {
     time: string
@@ -40,7 +42,7 @@ interface OpenMeteoRes {
 export function useWeather(): Weather {
   const { data } = useQuery<OpenMeteoRes, Error>('todos', () =>
     fetcher<OpenMeteoRes>(
-      'https://api.open-meteo.com/v1/forecast?latitude=-15.7801&longitude=-47.9292&hourly=temperature_2m&current_weather=true&timezone=America%2FSao_Paulo'
+      'https://api.open-meteo.com/v1/forecast?latitude=-15.7801&longitude=-47.9292&hourly=temperature_2m,weathercode&current_weather=true&timezone=America%2FSao_Paulo'
     )
   )
 
@@ -68,6 +70,7 @@ export function useWeather(): Weather {
   const nextHoursForecast = nextHours.map((time, index) => ({
     temperature: data?.hourly.temperature_2m[index],
     time: new Date(time),
+    weatherCode: data?.hourly.weathercode[index],
   }))
 
   const weatherCode = data?.current_weather.weathercode
