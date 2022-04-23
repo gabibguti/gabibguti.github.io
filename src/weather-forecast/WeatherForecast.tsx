@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import { FormattedDate, FormattedTime } from 'react-intl'
+import IconFryingPan from '../assets/IconFryingPan'
 import IconLocation from '../assets/IconLocation'
 import IconWind from '../assets/IconWind'
 import { useWeather } from './useWeather'
@@ -45,13 +46,25 @@ export function WeatherForecast(): ReactElement {
             </span>
           )}
         </span>
-        <span className="flex flex-row font-light text-lg text-xiketic items-center">
-          <span className="pr-3">
-            <IconWind />
-          </span>
-          {data?.currentWeather.windSpeed}&nbsp;
-          <span className="tracking-wider">{windSpeedUnit}</span>
-        </span>
+
+        <div className="h-64 grid grid-cols-2 grid-flow-col gap-4 font-light text-lg text-xiketic ">
+          <div className="flex flex-row justify-center items-center">
+            <span className="pr-3">
+              <IconWind />
+            </span>
+            {data?.currentWeather.windSpeed}&nbsp;
+            <span className="tracking-wider">{windSpeedUnit}</span>
+          </div>
+          <div>
+            <div className="flex flex-row justify-center items-center">
+              <span className="pr-3">
+                <IconFryingPan />
+              </span>
+              {data && data?.currentWeather.temperature >= 40 ? 'Yes' : 'No'}
+            </div>
+          </div>
+        </div>
+
         <div className="flex flex-col text-xiketic items-center pt-14">
           <span className="text-sm font-semibold uppercase pb-4">
             Next Hours

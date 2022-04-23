@@ -17,3 +17,6 @@ $ yarn start
 https://iconmonstr.com/
 https://open-meteo.com/en/docs#api_form
 https://v2.tailwindcss.com/docs/ major 2
+https://iconscout.com/icons/frying-pan
+
+<!-- <a href="https://iconscout.com/icons/frying-pan" target="_blank">Frying Pan Icon</a> by <a href="https://iconscout.com/contributors/saepul-nahwan" target="_blank">Saepul Nahwan</a> -->
