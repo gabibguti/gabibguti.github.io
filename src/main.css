@@ -1,0 +1,12 @@
+.tooltip {
+  @apply relative;
+}
+
+.tooltip .tooltiptext {
+  @apply absolute invisible text-white text-sm text-center rounded-full py-1 px-4 z-10 bg-gray-600;
+  right: -220%;
+}
+
+.tooltip:hover .tooltiptext {
+  @apply visible;
+}

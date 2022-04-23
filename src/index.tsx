@@ -7,6 +7,7 @@ import { App } from './App'
 import './index.css'
 import reportWebVitals from './reportWebVitals'
 import { WeatherForecast } from './weather-forecast/WeatherForecast'
+import './main.css'
 
 const queryClient = new QueryClient()
 

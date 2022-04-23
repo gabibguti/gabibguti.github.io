@@ -48,7 +48,7 @@ export function WeatherForecast(): ReactElement {
         </span>
 
         <div className="h-64 grid grid-cols-2 grid-flow-col gap-4 font-light text-lg text-xiketic ">
-          <div className="flex flex-row justify-center items-center">
+          <div className="flex flex-row items-center justify-center">
             <span className="pr-3">
               <IconWind />
             </span>
@@ -56,11 +56,16 @@ export function WeatherForecast(): ReactElement {
             <span className="tracking-wider">{windSpeedUnit}</span>
           </div>
           <div>
-            <div className="flex flex-row justify-center items-center">
+            <div className="flex flex-row items-center justify-center tooltip">
               <span className="pr-3">
                 <IconFryingPan />
               </span>
               {data && data?.currentWeather.temperature >= 40 ? 'Yes' : 'No'}
+              <span className="tooltiptext">
+                {data && data?.currentWeather.temperature >= 40
+                  ? 'Can fry eggs on asfalt today!'
+                  : 'Cannot fry eggs on the asfalt today'}
+              </span>
             </div>
           </div>
         </div>
