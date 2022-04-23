@@ -10,6 +10,7 @@ interface CurrentWeather {
   temperature: number
   windSpeed: number
   time: Date
+  weatherCode: number
 }
 
 interface Weather {
@@ -32,6 +33,7 @@ interface OpenMeteoRes {
     time: string
     windspeed: number
     temperature: number
+    weathercode: number
   }
 }
 
@@ -68,9 +70,11 @@ export function useWeather(): Weather {
     time: new Date(time),
   }))
 
+  const weatherCode = data?.current_weather.weathercode
+
   return {
     data: {
-      currentWeather: { temperature, windSpeed, time },
+      currentWeather: { temperature, windSpeed, time, weatherCode },
       nextHoursForecast,
       temperatureUnit,
     },

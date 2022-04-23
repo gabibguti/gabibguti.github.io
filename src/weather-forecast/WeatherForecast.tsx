@@ -3,6 +3,7 @@ import { FormattedDate, FormattedTime } from 'react-intl'
 import IconLocation from '../assets/IconLocation'
 import IconWind from '../assets/IconWind'
 import { useWeather } from './useWeather'
+import WeatherIcon from './WeatherIcon'
 
 export function WeatherForecast(): ReactElement {
   const { data } = useWeather()
@@ -30,8 +31,19 @@ export function WeatherForecast(): ReactElement {
             hour12={true}
           />
         </span>
-        <span className="flex flex-row font-thin text-xiketic text-8xl py-6">
-          {data?.currentWeather.temperature}&nbsp;{data?.temperatureUnit}
+        <span className="flex flex-row font-thin text-xiketic py-6">
+          <span className="text-8xl">
+            {data?.currentWeather.temperature}&nbsp;{data?.temperatureUnit}
+          </span>
+          {(data?.currentWeather.weatherCode ||
+            data?.currentWeather.temperature) && (
+            <span className="pl-4">
+              <WeatherIcon
+                weatherCode={data?.currentWeather.weatherCode}
+                temperature={data?.currentWeather.temperature}
+              />
+            </span>
+          )}
         </span>
         <span className="flex flex-row font-light text-lg text-xiketic items-center">
           <span className="pr-3">
