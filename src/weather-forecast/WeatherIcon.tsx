@@ -1,5 +1,6 @@
 import React, { ReactElement } from 'react'
 import IconFire from '../assets/IconFire'
+import IconRain from '../assets/IconRain'
 import IconSun from '../assets/IconSun'
 
 function WeatherIcon({
@@ -17,6 +18,15 @@ function WeatherIcon({
     case 0:
     case 1:
       return <IconSun />
+    case 61:
+    case 63:
+    case 65:
+    case 66:
+    case 67:
+    case 80:
+    case 81:
+    case 82:
+      return <IconRain />
     default:
       return null
   }
