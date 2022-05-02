@@ -10,3 +10,7 @@
 .tooltip:hover .tooltiptext {
   @apply visible;
 }
+
+.border-t-transparent {
+  border-top-color: transparent;
+}
