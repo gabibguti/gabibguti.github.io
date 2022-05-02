@@ -1,15 +1,20 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement, useState } from 'react'
 import { FormattedDate, FormattedTime } from 'react-intl'
 import IconFryingPan from '../assets/IconFryingPan'
 import IconLocation from '../assets/IconLocation'
 import IconWind from '../assets/IconWind'
 import { useWeather } from './useWeather'
 import WeatherIcon from './WeatherIcon'
+import cities from './cities.json'
 
 export function WeatherForecast(): ReactElement {
-  const { data } = useWeather()
+  const [city, setCity] = useState({
+    name: 'Rio de Janeiro',
+    ...cities['Rio de Janeiro'],
+  })
 
-  const city = 'Brasilia'
+  const { data } = useWeather({ city })
+
   const windSpeedUnit = 'km/h'
 
   return (
@@ -19,7 +24,18 @@ export function WeatherForecast(): ReactElement {
           <span className="pr-3">
             <IconLocation />
           </span>
-          {city}
+          <select
+            onChange={(e) => {
+              const selectedCity = e.target.value as keyof typeof cities
+              setCity({ name: selectedCity, ...cities[selectedCity] })
+            }}
+          >
+            {Object.keys(cities).map((name) => (
+              <option value={name} key={name}>
+                {name}
+              </option>
+            ))}
+          </select>
         </span>
         <span className="flex flex-row font-light text-sm text-xiketic items-center pt-4">
           <FormattedDate

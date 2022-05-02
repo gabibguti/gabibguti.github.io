@@ -39,10 +39,15 @@ interface OpenMeteoRes {
   }
 }
 
-export function useWeather(): Weather {
+interface City {
+  latitude: number
+  longitude: number
+}
+
+export function useWeather({ city }: { city: City }): Weather {
   const { data } = useQuery<OpenMeteoRes, Error>('todos', () =>
     fetcher<OpenMeteoRes>(
-      'https://api.open-meteo.com/v1/forecast?latitude=-15.7801&longitude=-47.9292&hourly=temperature_2m,weathercode&current_weather=true&timezone=America%2FSao_Paulo'
+      `https://api.open-meteo.com/v1/forecast?latitude=${city.latitude}&longitude=${city.longitude}&hourly=temperature_2m,weathercode&current_weather=true&timezone=America%2FSao_Paulo`
     )
   )
 
