@@ -49,8 +49,6 @@ interface City {
 export function useWeather({ city }: { city: City }): Weather {
   const [data, setData] = useState<Weather['data']>()
 
-  console.log('city', city)
-
   const { isLoading } = useQuery<OpenMeteoRes, Error>(
     ['weather', city],
     () =>
@@ -59,8 +57,6 @@ export function useWeather({ city }: { city: City }): Weather {
       ),
     {
       onSuccess: (data) => {
-        console.log('success')
-
         const timeISO = data?.current_weather.time
 
         const time = new Date(timeISO)
@@ -96,8 +92,6 @@ export function useWeather({ city }: { city: City }): Weather {
       },
     }
   )
-
-  console.log('isLoading', isLoading)
 
   return {
     data,
