@@ -38,6 +38,17 @@ export function App(): ReactElement {
           <b>game development</b>.
         </span>
       </div>
+      <div className="flex flex-col text-center justify-center items-center justify-self-end pb-5">
+        <span className="text-xiketic text-sm font-bold uppercase pb-4">
+          Little Projects
+        </span>
+        <a
+          href="/project/weather-forecast"
+          className=" bg-gray-800 text-sm text-aero-blue font-bold uppercase py-2 px-4 rounded-full"
+        >
+          Weather Forecast
+        </a>
+      </div>
     </div>
   )
 }
