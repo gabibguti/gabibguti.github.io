@@ -8,6 +8,7 @@ import './index.css'
 import reportWebVitals from './reportWebVitals'
 import { WeatherForecast } from './weather-forecast/WeatherForecast'
 import './main.css'
+import { Movies } from './movies/Movies'
 
 const queryClient = new QueryClient()
 
@@ -26,6 +27,7 @@ ReactDOM.render(
             </QueryClientProvider>
           }
         />
+        <Route path="project/movies" element={<Movies />} />
       </Routes>
     </Router>
   </React.StrictMode>,
