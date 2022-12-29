@@ -1,4 +1,5 @@
 import React, { ReactElement } from 'react'
+import { Link } from 'react-router-dom'
 import { IconGitHub } from './assets/IconGitHub'
 import { IconLinkedIn } from './assets/IconLinkedIn'
 
@@ -42,12 +43,12 @@ export function App(): ReactElement {
         <span className="text-xiketic text-sm font-bold uppercase pb-4">
           Little Projects
         </span>
-        <a
-          href="/project/weather-forecast"
+        <Link
+          to="/project/weather-forecast"
           className=" bg-gray-800 text-sm text-aero-blue font-bold uppercase py-2 px-4 rounded-full"
         >
           Weather Forecast
-        </a>
+        </Link>
       </div>
     </div>
   )
