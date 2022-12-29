@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-node@8c91899e586c5b171469028077307d293428b516 # v3.5.1
         with:
           node-version: 17
+      - name: Fix Node envelope routines error
+        run: export NODE_OPTIONS=--openssl-legacy-provider
       - name: Install dependencies
         run: yarn
       - name: Build
