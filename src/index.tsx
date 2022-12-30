@@ -27,7 +27,12 @@ ReactDOM.render(
             </QueryClientProvider>
           }
         />
-        <Route path="project/movies" element={<Movies />} />
+        <Route path="project/movies" element={
+            <IntlProvider locale="en">
+              <Movies />
+            </IntlProvider>
+          }
+        />
       </Routes>
     </Router>
   </React.StrictMode>,
