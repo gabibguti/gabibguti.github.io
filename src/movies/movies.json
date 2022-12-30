@@ -181,6 +181,48 @@
             "recommended-by": null,
             "rewatch": false,
             "plataform": "Netflix"
+        },
+        {
+            "title": "The Lord of the Rings: The Fellowship of the Ring (Extended)",
+            "sequence": 1,
+            "time-min": 228,
+            "year": 2001,
+            "genres": ["action", "adventure", "drama"],
+            "grade-imdb": 8.8,
+            "grade-gabriela": 10,
+            "strong-points": "Bilbo dissapearing in his own birthday party; All characters are amazing; Great story; Strider carrying 4 Hobbits in his back all the way; Frodo is brave; \"You shall not pass\" best scene; Legolas we love you",
+            "weak-points": "Frodo and Sam get to Mordor's border by the end of the movie. How come there are 2 more movies?; Rewatching it, I see how everything is poorly explained; Gandalf dies, can't believe it. Now, they're never gonna make it.",
+            "recommended-by": null,
+            "rewatch": true,
+            "plataform": "DVD"
+        },
+        {
+            "title": "The Lord of the Rings: The Two Towers (Extended)",
+            "sequence": 2,
+            "time-min": 235,
+            "year": 2002,
+            "genres": ["action", "adventure", "drama"],
+            "grade-imdb": 8.8,
+            "grade-gabriela": 10,
+            "strong-points": "Gollum finally appears and it's good CG even now; Gandalf resurrects; Frodo finds out he's nothing without Sam; The battle of Helm's Deeps is amazing;",
+            "weak-points": "Frodo is an idiot, but we know it's because of the Ring ok?; Frodo and Sam manage to regress in Mordor's path; Frodo, please stop believing Gollum, I beg you.",
+            "recommended-by": null,
+            "rewatch": true,
+            "plataform": "DVD"
+        },
+        {
+            "title": "The Lord of the Rings: The Return of the King (Extended)",
+            "sequence": 3,
+            "time-min": 252,
+            "year": 2003,
+            "genres": ["action", "adventure", "drama"],
+            "grade-imdb": 9.0,
+            "grade-gabriela": 10,
+            "strong-points": "Finally understood that Helm's Deep and Minas Tirith are different places; The Fellowship of the Ring finally succeeds. The Ring is destroyed!; Faramir is saved; The lady kills a fucking Nazgul and Witch-King; Great battle; Sam literally carries Frodo to the volcano, best character; I love the Smeagol transformation scene",
+            "weak-points": "Frodo goes to Valinor. Not necessary. I wanted him to marry Sam and be happily ever after.",
+            "recommended-by": null,
+            "rewatch": true,
+            "plataform": "DVD"
         }
     ],
     "tv-shows": [
