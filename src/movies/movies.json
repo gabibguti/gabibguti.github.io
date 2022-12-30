@@ -293,6 +293,48 @@
             "recommended-by": null,
             "rewatch": false,
             "plataform": "Cinema"
+        },
+        {
+            "title": "Malignant",
+            "sequence": 1,
+            "time-min": 111,
+            "year": 2021,
+            "genres": ["horror", "mystery", "crime"],
+            "grade-imdb": 6.2,
+            "grade-gabriela": 10,
+            "strong-points": "Great plot twist, even tho I foresaw it; Good horror movie;",
+            "weak-points": null,
+            "recommended-by": null,
+            "rewatch": false,
+            "plataform": "TV"
+        },
+        {
+            "title": "Hocus Pocus 2",
+            "sequence": 1,
+            "time-min": 103,
+            "year": 2022,
+            "genres": ["comedy", "family", "fantasy"],
+            "grade-imdb": 6.0,
+            "grade-gabriela": 7,
+            "strong-points": null,
+            "weak-points": null,
+            "recommended-by": null,
+            "rewatch": false,
+            "plataform": "Friend's house"
+        },
+        {
+            "title": "Winter Boy",
+            "sequence": 1,
+            "time-min": 122,
+            "year": 2022,
+            "genres": ["drama"],
+            "grade-imdb": 6.0,
+            "grade-gabriela": 7,
+            "strong-points": "Gay",
+            "weak-points": null,
+            "recommended-by": ["Pedro Martin"],
+            "rewatch": false,
+            "plataform": "Cinema"
         }
     ],
     "tv-shows": [
