@@ -2,7 +2,8 @@ import React, { ReactElement } from 'react'
 import { MoviesTable } from './MoviesTable'
 import { TotalizerBox } from './TotalizerBox'
 import movies from './movies.json'
-import { Movie } from './movie'
+import { Movie, TVShow } from './movie'
+import { TVShowsTable } from './TVShowsTable'
 
 export function Movies(): ReactElement {
 
@@ -35,6 +36,12 @@ export function Movies(): ReactElement {
             <span className='text-2xl font-bold uppercase'>All movies watched</span>
           </div>
           <MoviesTable movies={movies.movies as Movie[]} />
+        </div>
+        <div className="pt-8 w-full">
+          <div className='rounded-md bg-gray-800 text-aero-blue mb-2 py-5 px-5'>
+            <span className='text-2xl font-bold uppercase'>All TV shows watched</span>
+          </div>
+          <TVShowsTable TVShows={movies['tv-shows'] as TVShow[]} />
         </div>
       </div>
     </div>

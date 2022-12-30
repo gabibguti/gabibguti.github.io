@@ -2,18 +2,6 @@ import React, { ReactElement } from 'react'
 import type { Movie } from './movie'
 import {FormattedList} from "react-intl"
 
-// "title": string,
-// "sequence": number,
-// "time-min": number,
-// "year": number,
-// "genres": string[],
-// "grade-imdb": number,
-// "grade-gabriela": number,
-// "strong-points"?: string,
-// "weak-points"?: string,
-// "recommended-by"?: string[],
-// "rewatch": boolean
-
 function MovieDetails(movie: Movie): ReactElement {
   return (
     <div className="grid grid-cols-8 gap-2 bg-green-50 p-2 rounded-md w-full text-xiketic">
