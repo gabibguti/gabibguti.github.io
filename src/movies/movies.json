@@ -88,7 +88,7 @@
             "grade-gabriela": 10,
             "strong-points": "Pikachu pet; Eco-friendly",
             "weak-points": null,
-            "recommended-by": null,
+            "recommended-by": ["Martinho"],
             "rewatch": false
         },
         {
@@ -141,7 +141,7 @@
             "strong-points": "Great story; Wolves; Eco-friendly;",
             "weak-points": null,
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": ["Martinho", "Marina"]
         },
         {
             "title": "Castle in the Sky",
@@ -183,7 +183,7 @@
             "grade-gabriela": 10,
             "strong-points": "Wednesday's clothing style is amazing; I knew from the beggining Tyler was the one; Great teen romance",
             "weak-points": null,
-            "recommended-by": "Anika",
+            "recommended-by": ["Anika"],
             "rewatch": false
         },
         {
@@ -198,7 +198,7 @@
             "grade-gabriela": 9,
             "strong-points": "I love the way Anzu hates Riri; Riri worst character; I rooted for Tsukasa",
             "weak-points": "The season does not close 100% tho cause Anzu does not choose one Ikeman in the end",
-            "recommended-by": "Anika",
+            "recommended-by": ["Anika"],
             "rewatch": false
         },
         {
@@ -228,7 +228,7 @@
             "grade-gabriela": 10,
             "strong-points": "Killing enemies with the power of friendship; Itachi and Sasuke's story is beautiful; Cried every 2 episodes at some point; Amazing fights",
             "weak-points": "The first episodes are terrible; The war takes too long; Sakura sucks until the very end; Toby should be in Die Hard",
-            "recommended-by": "Thiago, Phil (my tattoo artist), probably more people",
+            "recommended-by": ["Thiago", "Phil (my tattoo artist)", "probably more people"],
             "rewatch": false
         },
         {
@@ -243,7 +243,7 @@
             "grade-gabriela": 1,
             "strong-points": null,
             "weak-points": "Too dramatic; She only suffers and makes bad choices",
-            "recommended-by": "Pedro",
+            "recommended-by": ["Pedro"],
             "rewatch": false
         },
         {
