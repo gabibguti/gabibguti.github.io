@@ -223,6 +223,34 @@
             "recommended-by": null,
             "rewatch": true,
             "plataform": "DVD"
+        },
+        {
+            "title": "Everything Everywhere All at Once",
+            "sequence": 1,
+            "time-min": 139,
+            "year": 2022,
+            "genres": ["action", "adventure", "comedy"],
+            "grade-imdb": 8.1,
+            "grade-gabriela": 10,
+            "strong-points": "Sausage fingers; The end of the world bagel; Multiverse;",
+            "weak-points": null,
+            "recommended-by": null,
+            "rewatch": false,
+            "plataform": "Cinema"
+        },
+        {
+            "title": "Doctor Strange in the Multiverse of Madness",
+            "sequence": 1,
+            "time-min": 126,
+            "year": 2022,
+            "genres": ["action", "adventure", "fantasy"],
+            "grade-imdb": 6.9,
+            "grade-gabriela": 7,
+            "strong-points": "Benedict Cumberbatch; Doctor Strange becomes a zombie; Multiverse",
+            "weak-points": "The girl could have fought from the beggining",
+            "recommended-by": null,
+            "rewatch": false,
+            "plataform": "Cinema"
         }
     ],
     "tv-shows": [
