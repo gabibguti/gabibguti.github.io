@@ -236,7 +236,8 @@
             "weak-points": null,
             "recommended-by": ["Pedro"],
             "rewatch": false,
-            "plataform": "Cinema"
+            "plataform": "Cinema",
+            "top": true
         },
         {
             "title": "Doctor Strange in the Multiverse of Madness",
@@ -292,7 +293,8 @@
             "weak-points": null,
             "recommended-by": null,
             "rewatch": false,
-            "plataform": "Cinema"
+            "plataform": "Cinema",
+            "top": true
         },
         {
             "title": "Malignant",
@@ -348,7 +350,8 @@
             "weak-points": null,
             "recommended-by": ["Pedro"],
             "rewatch": false,
-            "plataform": "Friend's platform"
+            "plataform": "Friend's platform",
+            "top": true
         }
     ],
     "tv-shows": [
@@ -366,7 +369,8 @@
             "weak-points": null,
             "recommended-by": ["Anika"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": true
         },
         {
             "title": "Romantic Killer",
@@ -398,7 +402,8 @@
             "weak-points": null,
             "recommended-by": null,
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": true
         },
         {
             "title": "Naruto Shippuden",
@@ -510,7 +515,8 @@
             "weak-points": "LOTR requires a fucking degree to catch up to the story. I did not recall any characters from the movies. Had to rewatch the movies to get context; Wanna see the productors make Elrond decay that much until Sauron's death",
             "recommended-by": null,
             "rewatch": false,
-            "plataform": "Amazon Prime"
+            "plataform": "Amazon Prime",
+            "top": true
         }
     ]
 }

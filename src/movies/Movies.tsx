@@ -33,6 +33,18 @@ export function Movies(): ReactElement {
         </div>
         <div className="pt-8 w-full">
           <div className='rounded-md bg-gray-800 text-aero-blue mb-2 py-5 px-5'>
+            <span className='text-2xl font-bold uppercase'>Top movies 2022</span>
+          </div>
+          <MoviesTable movies={movies.movies.filter(movie => movie.top)} />
+        </div>
+        <div className="pt-8 w-full">
+          <div className='rounded-md bg-gray-800 text-aero-blue mb-2 py-5 px-5'>
+            <span className='text-2xl font-bold uppercase'>Top TV shows 2022</span>
+          </div>
+          <TVShowsTable TVShows={movies['tv-shows'].filter(TVShow => TVShow.top)} />
+        </div>
+        <div className="pt-8 w-full">
+          <div className='rounded-md bg-gray-800 text-aero-blue mb-2 py-5 px-5'>
             <span className='text-2xl font-bold uppercase'>All movies watched</span>
           </div>
           <MoviesTable movies={movies.movies as Movie[]} />
@@ -48,15 +60,3 @@ export function Movies(): ReactElement {
   )
 }
 
-// TODO:
-// Total movies watched
-// Total tv shows watched
-// Total hours watched
-
-// Best movies
-
-// Series classification
-// Movies classification
-// Best horror movies
-
-// Best movies overtime

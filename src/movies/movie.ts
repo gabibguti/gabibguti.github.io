@@ -9,7 +9,8 @@ export type Movie = {
   'strong-points': string | null
   'weak-points': string | null
   'recommended-by': string[] | null
-  rewatch: boolean
+  rewatch: boolean,
+  'top'?: boolean
 }
 
 export type TVShow = {
@@ -25,5 +26,6 @@ export type TVShow = {
   'strong-points': string | null
   'weak-points': string | null
   'recommended-by': string[] | null
-  rewatch: boolean
+  rewatch: boolean,
+  'top'?: boolean
 }
