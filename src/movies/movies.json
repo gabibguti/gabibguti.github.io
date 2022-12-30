@@ -234,7 +234,7 @@
             "grade-gabriela": 10,
             "strong-points": "Sausage fingers; The end of the world bagel; Multiverse;",
             "weak-points": null,
-            "recommended-by": null,
+            "recommended-by": ["Pedro"],
             "rewatch": false,
             "plataform": "Cinema"
         },
@@ -320,7 +320,7 @@
             "weak-points": null,
             "recommended-by": null,
             "rewatch": false,
-            "plataform": "Friend's house"
+            "plataform": "Friend's platform"
         },
         {
             "title": "Winter Boy",
@@ -335,6 +335,20 @@
             "recommended-by": ["Pedro Martin"],
             "rewatch": false,
             "plataform": "Cinema"
+        },
+        {
+            "title": "Fresh",
+            "sequence": 1,
+            "time-min": 114,
+            "year": 2022,
+            "genres": ["comedy", "horror", "thriller"],
+            "grade-imdb": 6.7,
+            "grade-gabriela": 10,
+            "strong-points": "Great horror movie; Never date white man, good chance they are psycopaths; I like the way they fought their way out",
+            "weak-points": null,
+            "recommended-by": ["Pedro"],
+            "rewatch": false,
+            "plataform": "Friend's platform"
         }
     ],
     "tv-shows": [
