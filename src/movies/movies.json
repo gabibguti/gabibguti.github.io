@@ -163,7 +163,7 @@
             "year": 2021,
             "genres": ["biography", "comedy", "drama"],
             "grade-imdb": 8.0,
-            "grade-gabriela": 10,
+            "grade-gabriela": 3,
             "strong-points": "The story initial proposal is interesting; Transgender actress",
             "weak-points": "Too long; Too dramatic; He makes lots of wrong choices; I didn't like any songs",
             "recommended-by": null,
@@ -303,6 +303,21 @@
             "grade-gabriela": 4,
             "strong-points": "Tells some interesting things about the 9/11",
             "weak-points": "Too long",
+            "recommended-by": null,
+            "rewatch": false
+        },
+        {
+            "title": "The Lord of the Rings: The Rings of Power",
+            "season": 1,
+            "episodes": 9,
+            "epidodes-watched": 9,
+            "episode-time-min": 60,
+            "year": 2022,
+            "genres": ["action", "adventure", "drama"],
+            "grade-imdb": 6.9,
+            "grade-gabriela": 10,
+            "strong-points": "Galadriel does not die even against a volcano; Halbrand is an amazing name and he's so cool; You will not believe which character is Sauron; Main Hobbit has algae name. Claps for Nori; Wordart is back (and thanks I needed that explanation); Great pacing; Elrond is beautiful",
+            "weak-points": "LOTR requires a fucking degree to catch up to the story. I did not recall any characters from the movies. Had to rewatch the movies to get context; Wanna see the productors make Elrond decay that much until Sauron's death",
             "recommended-by": null,
             "rewatch": false
         }
