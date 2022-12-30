@@ -17,6 +17,9 @@ export function Movies(): ReactElement {
           <TotalizerBox title="Total hours watched" total={100} unit="hour" />
         </div>
         <div className="pt-8 w-full">
+          <div className='rounded-md bg-gray-800 text-aero-blue mb-2 py-5 px-5'>
+            <span className='text-2xl font-bold uppercase'>All movies watched</span>
+          </div>
           <MoviesTable movies={movies.movies as Movie[]} />
         </div>
       </div>
