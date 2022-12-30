@@ -17,7 +17,7 @@ import {FormattedList} from "react-intl"
 function MovieDetails(movie: Movie): ReactElement {
   return (
     <div className="grid grid-cols-8 gap-2 bg-green-50 p-2 rounded-md w-full text-xiketic">
-      <div className="col-span-3 row-span-4 bg-indigo-500 p-2 rounded-md">
+      <div className="col-span-3 row-span-5 bg-indigo-500 p-2 rounded-md">
         <span className="flex items-center justify-center h-full text-3xl font-bold">
           {movie.title}
         </span>
@@ -69,8 +69,15 @@ function MovieDetails(movie: Movie): ReactElement {
 
       <div className="col-span-5 col-start-4 p-2 rounded-md">
         <div className="flex flex-col">
+          <span className="text-xs">Genres</span>
+          <div className='flex flex-row gap-1 mt-2'>{movie.genres.map(genre =><div className='rounded-full bg-indigo-100 text-xs py-1 px-2'>{genre}</div>)}</div>
+        </div>
+      </div>
+
+      <div className="col-span-5 col-start-4 p-2 rounded-md">
+        <div className="flex flex-col">
           <span className="text-xs">Recommended by</span>
-          <span>{movie['recommended-by'] ? 
+          <span className='text-sm'>{movie['recommended-by'] ? 
           <FormattedList type='conjunction' value={movie['recommended-by']} /> : "-"}</span>
         </div>
       </div>
