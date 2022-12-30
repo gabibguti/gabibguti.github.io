@@ -265,6 +265,34 @@
             "recommended-by": null,
             "rewatch": false,
             "plataform": "Cinema"
+        },
+        {
+            "title": "Top Gun: Maverick",
+            "sequence": 2,
+            "time-min": 130,
+            "year": 2022,
+            "genres": ["action", "drama"],
+            "grade-imdb": 8.4,
+            "grade-gabriela": 6,
+            "strong-points": "Good action movie; Planes; Maverick flying to show his students how to do and survive the mission",
+            "weak-points": "Too long; No need for romance",
+            "recommended-by": null,
+            "rewatch": false,
+            "plataform": "Cinema"
+        },
+        {
+            "title": "Nope",
+            "sequence": 1,
+            "time-min": 130,
+            "year": 2022,
+            "genres": ["horror", "mystery", "sci-fi"],
+            "grade-imdb": 6.9,
+            "grade-gabriela": 10,
+            "strong-points": "Timeless movie; Jordan Peele; The plot twist is great; The fighting is great; Great story; Good pacing; Artistical;",
+            "weak-points": null,
+            "recommended-by": null,
+            "rewatch": false,
+            "plataform": "Cinema"
         }
     ],
     "tv-shows": [
