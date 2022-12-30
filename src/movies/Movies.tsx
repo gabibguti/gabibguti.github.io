@@ -1,9 +1,8 @@
 import React, { ReactElement } from 'react'
-import { MoviesTable } from './MoviesTable'
-import { TotalizerBox } from './TotalizerBox'
+import { Link } from 'react-router-dom'
 import movies from './movies.json'
-import { Movie, TVShow } from './movie'
-import { TVShowsTable } from './TVShowsTable'
+import { Section } from './Section'
+import { TotalizerBox } from './TotalizerBox'
 
 export function Movies(): ReactElement {
 
@@ -31,29 +30,19 @@ export function Movies(): ReactElement {
           <TotalizerBox title="Total TV Shows watched" total={totalTVShowsWatched} />
           <TotalizerBox title="Total hours watched" total={totalHoursWatched} unit="hour" />
         </div>
-        <div className="pt-8 w-full">
-          <div className='rounded-md bg-gray-800 text-aero-blue mb-2 py-5 px-5'>
-            <span className='text-2xl font-bold uppercase'>Top movies 2022</span>
-          </div>
-          <MoviesTable movies={movies.movies.filter(movie => movie.top)} />
-        </div>
-        <div className="pt-8 w-full">
-          <div className='rounded-md bg-gray-800 text-aero-blue mb-2 py-5 px-5'>
-            <span className='text-2xl font-bold uppercase'>Top TV shows 2022</span>
-          </div>
-          <TVShowsTable TVShows={movies['tv-shows'].filter(TVShow => TVShow.top)} />
-        </div>
-        <div className="pt-8 w-full">
-          <div className='rounded-md bg-gray-800 text-aero-blue mb-2 py-5 px-5'>
-            <span className='text-2xl font-bold uppercase'>All movies watched</span>
-          </div>
-          <MoviesTable movies={movies.movies as Movie[]} />
-        </div>
-        <div className="pt-8 w-full">
-          <div className='rounded-md bg-gray-800 text-aero-blue mb-2 py-5 px-5'>
-            <span className='text-2xl font-bold uppercase'>All TV shows watched</span>
-          </div>
-          <TVShowsTable TVShows={movies['tv-shows'] as TVShow[]} />
+        <div className='w-full mt-8'>
+        <Link to="/project/movies/top-movies">
+          <Section title="Top movies 2022" />
+        </Link>
+        <Link to="/project/movies/top-tv-shows">
+          <Section title="Top TV shows 2022" />
+        </Link>
+        <Link to="/project/movies/all-movies">
+          <Section title="All movies watched 2022" />
+        </Link>
+        <Link to="/project/movies/all-tv-shows">
+          <Section title="All TV shows watched 2022" />
+        </Link>
         </div>
       </div>
     </div>
