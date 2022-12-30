@@ -9,11 +9,15 @@ export function Movies(): ReactElement {
   const totalMoviesWatched = movies.movies.length
   const totalTVShowsWatched = movies['tv-shows'].length
 
-  const totalMinWatched = movies.movies.reduce((totalTime, movie) => {
+  const totalMoviesMinWatched = movies.movies.reduce((totalTime, movie) => {
     totalTime += movie['time-min']
     return totalTime
   }, 0)
-  const totalHoursWatched = Math.round(totalMinWatched / 60)
+  const totalTVShowsMinWatched = movies['tv-shows'].reduce((totalTime, TVShow) => {
+    totalTime += TVShow['epidodes-watched']*TVShow['episode-time-min']
+    return totalTime
+  }, 0)
+  const totalHoursWatched = Math.round((totalMoviesMinWatched + totalTVShowsMinWatched) / 60)
 
   return (
     <div className="bg-gradient-to-r from-aero-blue to-light-blue flex flex-col w-screen min-h-screen h-full p-9">
