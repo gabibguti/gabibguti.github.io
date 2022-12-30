@@ -140,8 +140,8 @@
             "grade-gabriela": 10,
             "strong-points": "Great story; Wolves; Eco-friendly;",
             "weak-points": null,
-            "recommended-by": null,
-            "rewatch": ["Martinho", "Marina"]
+            "recommended-by": ["Martinho", "Marina"],
+            "rewatch": false
         },
         {
             "title": "Castle in the Sky",
