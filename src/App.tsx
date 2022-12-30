@@ -49,6 +49,12 @@ export function App(): ReactElement {
         >
           Weather Forecast
         </Link>
+        <Link
+          to="/project/movies"
+          className=" bg-gray-800 text-sm text-aero-blue font-bold uppercase py-2 px-4 rounded-full mt-2"
+        >
+          Movies
+        </Link>
       </div>
     </div>
   )
