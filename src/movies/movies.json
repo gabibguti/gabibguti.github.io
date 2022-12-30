@@ -11,7 +11,8 @@
             "strong-points": "Millie Bobby Brown; Helena Bonham Carter; It's a feminist movie",
             "weak-points": "The story is ok, nothing too exciting; No need for the romance with the boy",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Enola Holmes 2",
@@ -24,7 +25,8 @@
             "strong-points": "Millie Bobby Brown; Helena Bonham Carter; It's a feminist movie; I loved the Moriarty character choice",
             "weak-points": "The story is ok, nothing too exciting; I still feel no ned for the romance with the boy",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Hustle",
@@ -37,7 +39,8 @@
             "strong-points": "Adam Sandler",
             "weak-points": "Adam Sandler",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Whisper of the Heart",
@@ -50,7 +53,8 @@
             "strong-points": "It's a very cute romance story; Country roads in japanese",
             "weak-points": "The cat that appears in the movie poster barely appear in the story. I expected more cats flying around.",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Sherlock Holmes",
@@ -63,7 +67,8 @@
             "strong-points": "Sherlock Holmes",
             "weak-points": null,
             "recommended-by": null,
-            "rewatch": true
+            "rewatch": true,
+            "plataform": "Netflix"
         },
         {
             "title": "When Marnie Was There",
@@ -76,7 +81,8 @@
             "strong-points": "Anna paints; It's gay",
             "weak-points": "Turns out it's gay in a wrong way",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Nausicaä of the Valley of the Wind",
@@ -89,7 +95,8 @@
             "strong-points": "Pikachu pet; Eco-friendly",
             "weak-points": null,
             "recommended-by": ["Martinho"],
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Porco Rosso",
@@ -102,7 +109,8 @@
             "strong-points": "Planes fight",
             "weak-points": "No need for romance",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Don't Look Up",
@@ -115,7 +123,8 @@
             "strong-points": "Very relatable on politics context",
             "weak-points": "Too long",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Ponyo",
@@ -128,7 +137,8 @@
             "strong-points": "Good story; Amazing father who wants to rule the world",
             "weak-points": "Apparently the father was wrong and people are in favor of children romance. I'm still on the father's side tho",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Princess Mononoke",
@@ -141,7 +151,8 @@
             "strong-points": "Great story; Wolves; Eco-friendly;",
             "weak-points": null,
             "recommended-by": ["Martinho", "Marina"],
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Castle in the Sky",
@@ -154,7 +165,8 @@
             "strong-points": "Great story; Chaising on train tracks; There's a fucking castle in the sky; Eco-friendly; Cute romance",
             "weak-points": null,
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "tick, tick...BOOM!",
@@ -167,7 +179,8 @@
             "strong-points": "The story initial proposal is interesting; Transgender actress",
             "weak-points": "Too long; Too dramatic; He makes lots of wrong choices; I didn't like any songs",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         }
     ],
     "tv-shows": [
@@ -184,7 +197,8 @@
             "strong-points": "Wednesday's clothing style is amazing; I knew from the beggining Tyler was the one; Great teen romance",
             "weak-points": null,
             "recommended-by": ["Anika"],
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Romantic Killer",
@@ -199,7 +213,8 @@
             "strong-points": "I love the way Anzu hates Riri; Riri worst character; I rooted for Tsukasa",
             "weak-points": "The season does not close 100% tho cause Anzu does not choose one Ikeman in the end",
             "recommended-by": ["Anika"],
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Stranger Things",
@@ -214,7 +229,8 @@
             "strong-points": "Millie Bobby Brown; Running up that hill song sticks to your head forever; Eddie is amazing, go Hellfire club!; Jim fucking amazing escaping a Russian prision",
             "weak-points": null,
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Naruto Shippuden",
@@ -229,7 +245,8 @@
             "strong-points": "Killing enemies with the power of friendship; Itachi and Sasuke's story is beautiful; Cried every 2 episodes at some point; Amazing fights",
             "weak-points": "The first episodes are terrible; The war takes too long; Sakura sucks until the very end; Toby should be in Die Hard",
             "recommended-by": ["Thiago", "Phil (my tattoo artist)", "probably more people"],
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Maid",
@@ -244,7 +261,8 @@
             "strong-points": null,
             "weak-points": "Too dramatic; She only suffers and makes bad choices",
             "recommended-by": ["Pedro"],
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Love on the Spectrum",
@@ -259,7 +277,8 @@
             "strong-points": "So cute. Don't know why I stopped watching",
             "weak-points": null,
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Old Enough!",
@@ -274,7 +293,8 @@
             "strong-points": "Little kids failing to do tasks requested by their parents",
             "weak-points": null,
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Is It Cake?",
@@ -289,7 +309,8 @@
             "strong-points": "Cakes; You never know which one is real or cake",
             "weak-points": "Host is annoying; My fav candidate lost and I stopped watching",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "Turning Point: 9/11 and the War on Terror",
@@ -304,7 +325,8 @@
             "strong-points": "Tells some interesting things about the 9/11",
             "weak-points": "Too long",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Netflix"
         },
         {
             "title": "The Lord of the Rings: The Rings of Power",
@@ -319,7 +341,8 @@
             "strong-points": "Galadriel does not die even against a volcano; Halbrand is an amazing name and he's so cool; You will not believe which character is Sauron; Main Hobbit has algae name. Claps for Nori; Wordart is back (and thanks I needed that explanation); Great pacing; Elrond is beautiful",
             "weak-points": "LOTR requires a fucking degree to catch up to the story. I did not recall any characters from the movies. Had to rewatch the movies to get context; Wanna see the productors make Elrond decay that much until Sauron's death",
             "recommended-by": null,
-            "rewatch": false
+            "rewatch": false,
+            "plataform": "Amazon Prime"
         }
     ]
 }
