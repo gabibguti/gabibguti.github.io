@@ -240,7 +240,7 @@
         },
         {
             "title": "Doctor Strange in the Multiverse of Madness",
-            "sequence": 1,
+            "sequence": 3,
             "time-min": 126,
             "year": 2022,
             "genres": ["action", "adventure", "fantasy"],
@@ -248,6 +248,20 @@
             "grade-gabriela": 7,
             "strong-points": "Benedict Cumberbatch; Doctor Strange becomes a zombie; Multiverse",
             "weak-points": "The girl could have fought from the beggining",
+            "recommended-by": null,
+            "rewatch": false,
+            "plataform": "Cinema"
+        },
+        {
+            "title": "The Batman",
+            "sequence": 1,
+            "time-min": 176,
+            "year": 2022,
+            "genres": ["action", "crime", "drama"],
+            "grade-imdb": 7.8,
+            "grade-gabriela": 6,
+            "strong-points": "Robert Pattinson; Black makeup scene; Good story",
+            "weak-points": "Too long; No need for romance",
             "recommended-by": null,
             "rewatch": false,
             "plataform": "Cinema"
