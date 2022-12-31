@@ -1,6 +1,20 @@
 {
     "movies": [
         {
+            "title": "Choose or Die",
+            "sequence": 1,
+            "time-min": 84,
+            "year": 2022,
+            "genres": ["drama", "horror", "thriller"],
+            "grade-imdb": 4.8,
+            "grade-gabriela": 7,
+            "strong-points": "Asa Butterfield; Interesting story",
+            "weak-points": null,
+            "recommended-by": null,
+            "rewatch": false,
+            "plataform": "Friend's platform"
+        },
+        {
             "title": "Enola Holmes",
             "sequence": 1,
             "time-min": 123,
