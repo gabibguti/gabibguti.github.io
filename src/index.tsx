@@ -31,31 +31,41 @@ ReactDOM.render(
             </QueryClientProvider>
           }
         />
-        <Route path="project/movies" element={
+        <Route
+          path="project/movies"
+          element={
             <IntlProvider locale="en">
               <Movies />
             </IntlProvider>
           }
         />
-        <Route path="project/movies/top-movies" element={
+        <Route
+          path="project/movies/top-movies"
+          element={
             <IntlProvider locale="en">
               <TopMovies />
             </IntlProvider>
           }
         />
-        <Route path="project/movies/top-tv-shows" element={
+        <Route
+          path="project/movies/top-tv-shows"
+          element={
             <IntlProvider locale="en">
               <TopTVShows />
             </IntlProvider>
           }
         />
-        <Route path="project/movies/all-movies" element={
+        <Route
+          path="project/movies/all-movies"
+          element={
             <IntlProvider locale="en">
               <AllMovies />
             </IntlProvider>
           }
         />
-        <Route path="project/movies/all-tv-shows" element={
+        <Route
+          path="project/movies/all-tv-shows"
+          element={
             <IntlProvider locale="en">
               <AllTVShows />
             </IntlProvider>
