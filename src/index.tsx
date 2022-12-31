@@ -13,6 +13,7 @@ import { TopMovies } from './movies/TopMovies'
 import { TopTVShows } from './movies/TopTVShows'
 import { AllMovies } from './movies/AllMovies'
 import { AllTVShows } from './movies/AllTVShows'
+import { TopMoviesFromAllTime } from './movies/TopMoviesFromAllTime'
 
 const queryClient = new QueryClient()
 
@@ -68,6 +69,14 @@ ReactDOM.render(
           element={
             <IntlProvider locale="en">
               <AllTVShows />
+            </IntlProvider>
+          }
+        />
+        <Route
+          path="project/movies/top-movies-all-time"
+          element={
+            <IntlProvider locale="en">
+              <TopMoviesFromAllTime />
             </IntlProvider>
           }
         />

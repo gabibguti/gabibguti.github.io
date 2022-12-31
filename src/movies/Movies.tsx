@@ -57,6 +57,9 @@ export function Movies(): ReactElement {
           <Link to="/project/movies/all-tv-shows">
             <Section title="All TV shows watched 2022" />
           </Link>
+          <Link to="/project/movies/top-movies-all-time">
+            <Section title="Top movies from all time" />
+          </Link>
         </div>
       </div>
     </div>
