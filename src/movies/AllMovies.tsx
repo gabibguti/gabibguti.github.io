@@ -1,5 +1,5 @@
 import React, { ReactElement } from "react";
-import movies from './movies.json'
+import movies from './movies-2022.json'
 import { MoviesTable } from "./MoviesTable";
 import { Section } from "./Section";
 

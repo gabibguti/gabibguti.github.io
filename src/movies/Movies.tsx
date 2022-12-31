@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import { Link } from 'react-router-dom'
-import movies from './movies.json'
+import movies from './movies-2022.json'
 import { Section } from './Section'
 import { TotalizerBox } from './TotalizerBox'
 

@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import { MoviesTable } from "./MoviesTable";
-import movies from './movies.json'
+import movies from './movies-2022.json'
 import { Section } from "./Section";
 
 export function TopMovies(): ReactElement {
