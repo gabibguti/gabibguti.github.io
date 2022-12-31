@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 import type { TVShow } from './movie'
-import {FormattedList} from "react-intl"
+import { FormattedList } from 'react-intl'
 
 function TVShowDetails(TVShow: TVShow): ReactElement {
   return (
@@ -31,7 +31,9 @@ function TVShowDetails(TVShow: TVShow): ReactElement {
       <div className="col-span-1 bg-indigo-200 p-2 rounded-md">
         <div className="flex flex-col">
           <span className="text-xs">Ep</span>
-          <span>{TVShow['epidodes-watched']}/{TVShow.episodes}</span>
+          <span>
+            {TVShow['epidodes-watched']}/{TVShow.episodes}
+          </span>
         </div>
       </div>
       <div className="col-span-1 bg-indigo-200 p-2 rounded-md">
@@ -70,15 +72,29 @@ function TVShowDetails(TVShow: TVShow): ReactElement {
       <div className="col-span-7 col-start-5 p-2 rounded-md">
         <div className="flex flex-col">
           <span className="text-xs">Genres</span>
-          <div className='flex flex-row gap-1 mt-2'>{TVShow.genres.map(genre =><div className='rounded-full bg-indigo-100 text-xs py-1 px-2'>{genre}</div>)}</div>
+          <div className="flex flex-row gap-1 mt-2">
+            {TVShow.genres.map((genre) => (
+              <div className="rounded-full bg-indigo-100 text-xs py-1 px-2">
+                {genre}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       <div className="col-span-7 col-start-5 p-2 rounded-md">
         <div className="flex flex-col">
           <span className="text-xs">Recommended by</span>
-          <span className='text-sm'>{TVShow['recommended-by'] ? 
-          <FormattedList type='conjunction' value={TVShow['recommended-by']} /> : "-"}</span>
+          <span className="text-sm">
+            {TVShow['recommended-by'] ? (
+              <FormattedList
+                type="conjunction"
+                value={TVShow['recommended-by']}
+              />
+            ) : (
+              '-'
+            )}
+          </span>
         </div>
       </div>
     </div>

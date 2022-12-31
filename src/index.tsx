@@ -9,6 +9,11 @@ import reportWebVitals from './reportWebVitals'
 import { WeatherForecast } from './weather-forecast/WeatherForecast'
 import './main.css'
 import { Movies } from './movies/Movies'
+import { TopMovies } from './movies/TopMovies'
+import { TopTVShows } from './movies/TopTVShows'
+import { AllMovies } from './movies/AllMovies'
+import { AllTVShows } from './movies/AllTVShows'
+import { TopMoviesFromAllTime } from './movies/TopMoviesFromAllTime'
 
 const queryClient = new QueryClient()
 
@@ -27,9 +32,51 @@ ReactDOM.render(
             </QueryClientProvider>
           }
         />
-        <Route path="project/movies" element={
+        <Route
+          path="project/movies"
+          element={
             <IntlProvider locale="en">
               <Movies />
+            </IntlProvider>
+          }
+        />
+        <Route
+          path="project/movies/top-movies"
+          element={
+            <IntlProvider locale="en">
+              <TopMovies />
+            </IntlProvider>
+          }
+        />
+        <Route
+          path="project/movies/top-tv-shows"
+          element={
+            <IntlProvider locale="en">
+              <TopTVShows />
+            </IntlProvider>
+          }
+        />
+        <Route
+          path="project/movies/all-movies"
+          element={
+            <IntlProvider locale="en">
+              <AllMovies />
+            </IntlProvider>
+          }
+        />
+        <Route
+          path="project/movies/all-tv-shows"
+          element={
+            <IntlProvider locale="en">
+              <AllTVShows />
+            </IntlProvider>
+          }
+        />
+        <Route
+          path="project/movies/top-movies-all-time"
+          element={
+            <IntlProvider locale="en">
+              <TopMoviesFromAllTime />
             </IntlProvider>
           }
         />
