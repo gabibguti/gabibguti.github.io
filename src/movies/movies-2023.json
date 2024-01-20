@@ -10,9 +10,10 @@
             "grade-gabriela": 5,
             "strong-points": "The story proposal of a king being murdered, the prince running away and the conflict between a good wizard and a bad wizard sounded very interesting at the beginning.",
             "weak-points": "The story development is not intersting. I gave up on watching several times until the end.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Sheng Wang: Sweet and Juicy",
@@ -24,9 +25,10 @@
             "grade-gabriela": 7,
             "strong-points": "Very fun comedy show to watch. I love the quote: I am not well read but my books are well traveled.",
             "weak-points": "The only week point is not having 10 hours of this show to watch.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Garfunkel and Oates: Trying to be Special",
@@ -38,9 +40,10 @@
             "grade-gabriela": 3,
             "strong-points": "",
             "weak-points": "I didn't like it. Definetely not my kind of comedy. I didn't like the songs.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Perfume: The Story of a Murderer",
@@ -52,9 +55,10 @@
             "grade-gabriela": 7,
             "strong-points": "Very intersting movie. I like how the character is invincible, it is quite funny, his long name when narrated throughout the movie gave me good laughs to. Plus, I loved how his life of crime develops and his crazy need for developing more perfumes grow. In the movie, we hope for him not to get caught and the end is both funny and creative, he loses, but he doesn't.",
             "weak-points": "The movie is so long. I understand there's a good story to tell there and it's worth watching but we could cut out some scenes to make it shorter.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "The Orphanage",
@@ -66,9 +70,10 @@
             "grade-gabriela": 7,
             "strong-points": "The orphanage delivers an amazing story with a lot of suspense and fear towards the ghosts and the woman with the key on her neck. It's a great story with a great solution. It's amazing to see how the solution to the mystery of the child disappearence was there the whole time, but the mother needs to go through a long journey to find out what happened to the orphanage kids so they take her to the solution. The end of the story is more poetic than good for me, but it's a good ending. Fits the story perfectly.",
             "weak-points": "",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "The Skeleton Key",
@@ -80,9 +85,10 @@
             "grade-gabriela": 5,
             "strong-points": "The intial plot sounds intersting.",
             "weak-points": "The development of the mystery solution is not good. The whole thing about the secret cult does not give a good plot twist by the end. Plus, the moovie is too long to have this very shallow development about the cult and reincarnation and silenting people.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Glass Onion: A Knives Out Mystery",
@@ -94,9 +100,10 @@
             "grade-gabriela": 3,
             "strong-points": "I like murder and mystery stories, so the proposal convinced me. The initial wooden mystery box interested me as well.",
             "weak-points": "People break the wooden box instead of showing an intelligent solution to solve the puzzle. Plus, the mystery turns out to be not intersting. I guess the comedy tears apart the suspense and mystery of the movie, which is not what I expected.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "The Game",
@@ -108,13 +115,13 @@
             "grade-gabriela": 3,
             "strong-points": "Great story! The movie is long but keeps you thrilled throughout the entire time. Starting with the banker's distant brother's visiting on his birthday out of sudden, to the game proposal, to the whole mystery after mystery surrounding the game company, until the game entagles the banker in madness to the final party, the game is amazing! Everything is very confusing and at the same time that solutions are not given for how the game company plots the game, the final party embraces everything I needed to finish the movie.",
             "weak-points": "It is long, but it is worth it!",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
             "plataform": "Netflix UK",
             "top": true
         }
     ],
-    "tv-shows": [
+    "tv_shows": [
         {
             "title": "Extraordinary Attorney Woo",
             "season": 1,
@@ -129,7 +136,8 @@
             "weak-points": "I was not cativated about the romance story though.",
             "recommended-by": ["Helena"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Locke & Key",
@@ -142,10 +150,11 @@
             "grade-imdb": 7.3,
             "grade-gabriela": 7,
             "strong-points": "The new plot of the season about the historical characters coming back to life is great. In this season is nice to see how they explore new keys and old keys, the Curtain episode shows that.",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "The Office (U.S.)",
@@ -158,10 +167,11 @@
             "grade-imdb": 9.0,
             "grade-gabriela": 5,
             "strong-points": "Fun to watch and not think about anything.",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": ["Marcelo", "Martinho"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "The Office (U.S.)",
@@ -174,10 +184,11 @@
             "grade-imdb": 9.0,
             "grade-gabriela": 5,
             "strong-points": "Fun to watch and not think about anything.",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": ["Marcelo", "Martinho"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "The Office (U.S.)",
@@ -190,10 +201,11 @@
             "grade-imdb": 9.0,
             "grade-gabriela": 5,
             "strong-points": "Fun to watch and not think about anything.",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": ["Marcelo", "Martinho"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         }
     ]
 }

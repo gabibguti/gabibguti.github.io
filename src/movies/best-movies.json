@@ -8,11 +8,12 @@
             "genres": ["drama", "mystery", "sci-fi"],
             "grade-imdb": 8.5,
             "grade-gabriela": 10,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": null
+            "plataform": "",
+            "top": true
         },
         {
             "title": "The Illusionist",
@@ -22,11 +23,12 @@
             "genres": ["drama", "mystery", "fantasy"],
             "grade-imdb": 7.6,
             "grade-gabriela": 10,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": null
+            "plataform": "",
+            "top": true
         },
         {
             "title": "The Gift",
@@ -36,11 +38,12 @@
             "genres": ["drama", "mystery", "thriller"],
             "grade-imdb": 7.0,
             "grade-gabriela": 10,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": null
+            "plataform": "",
+            "top": true
         },
         {
             "title": "The Invisible Guest",
@@ -50,11 +53,12 @@
             "genres": ["drama", "mystery", "crime"],
             "grade-imdb": 8.0,
             "grade-gabriela": 10,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": null
+            "plataform": "",
+            "top": true
         },
         {
             "title": "Inception",
@@ -64,11 +68,12 @@
             "genres": ["action", "adventure", "sci-fi"],
             "grade-imdb": 8.8,
             "grade-gabriela": 10,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": null
+            "plataform": "",
+            "top": true
         },
         {
             "title": "Parasite",
@@ -78,11 +83,12 @@
             "genres": ["drama", "thriller"],
             "grade-imdb": 8.5,
             "grade-gabriela": 10,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": null
+            "plataform": "",
+            "top": true
         },
         {
             "title": "Oldboy",
@@ -92,11 +98,12 @@
             "genres": ["drama", "action", "mystery"],
             "grade-imdb": 5.8,
             "grade-gabriela": 10,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": null
+            "plataform": "",
+            "top": true
         },
         {
             "title": "The Sixth Sense",
@@ -106,11 +113,12 @@
             "genres": ["drama", "thriller", "mystery"],
             "grade-imdb": 8.2,
             "grade-gabriela": 10,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": null
+            "plataform": "",
+            "top": true
         },
         {
             "title": "Nope",
@@ -120,11 +128,12 @@
             "genres": ["horror", "mystery", "sci-fi"],
             "grade-imdb": 6.9,
             "grade-gabriela": 10,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Cinema"
+            "plataform": "Cinema",
+            "top": true
         },
         {
             "title": "The Game",
@@ -136,9 +145,11 @@
             "grade-gabriela": 3,
             "strong-points": "Great story! The movie is long but keeps you thrilled throughout the entire time. Starting with the banker's distant brother's visiting on his birthday out of sudden, to the game proposal, to the whole mystery after mystery surrounding the game company, until the game entagles the banker in madness to the final party, the game is amazing! Everything is very confusing and at the same time that solutions are not given for how the game company plots the game, the final party embraces everything I needed to finish the movie.",
             "weak-points": "It is long, but it is worth it!",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix UK"
+            "plataform": "Netflix UK",
+            "top": true
         }
-    ]
+    ],
+    "tv_shows": []
 }

@@ -14,6 +14,12 @@ module.exports = {
       'light-blue': '#A6CFD5',
       'aero-blue': '#C2E7D9',
     }),
+    ringColor: (theme) => ({
+      ...theme('colors'),
+      xiketic: '#0D0221',
+      'light-blue': '#A6CFD5',
+      'aero-blue': '#C2E7D9',
+    })
   },
   variants: {
     extend: {},

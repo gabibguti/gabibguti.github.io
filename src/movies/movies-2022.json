@@ -9,10 +9,11 @@
             "grade-imdb": 4.8,
             "grade-gabriela": 7,
             "strong-points": "Asa Butterfield; Interesting story",
-            "weak-points": null,
-            "recommended-by": null,
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Friend's platform"
+            "plataform": "Friend's platform",
+            "top": false
         },
         {
             "title": "Enola Holmes",
@@ -24,9 +25,10 @@
             "grade-gabriela": 7,
             "strong-points": "Millie Bobby Brown; Helena Bonham Carter; It's a feminist movie",
             "weak-points": "The story is ok, nothing too exciting; No need for the romance with the boy",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Enola Holmes 2",
@@ -38,9 +40,10 @@
             "grade-gabriela": 7,
             "strong-points": "Millie Bobby Brown; Helena Bonham Carter; It's a feminist movie; I loved the Moriarty character choice",
             "weak-points": "The story is ok, nothing too exciting; I still feel no ned for the romance with the boy",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Hustle",
@@ -52,9 +55,10 @@
             "grade-gabriela": 5,
             "strong-points": "Adam Sandler",
             "weak-points": "Adam Sandler",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Whisper of the Heart",
@@ -66,9 +70,10 @@
             "grade-gabriela": 8,
             "strong-points": "It's a very cute romance story; Country roads in japanese",
             "weak-points": "The cat that appears in the movie poster barely appear in the story. I expected more cats flying around.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Sherlock Holmes",
@@ -79,10 +84,11 @@
             "grade-imdb": 7.6,
             "grade-gabriela": 9,
             "strong-points": "Sherlock Holmes",
-            "weak-points": null,
-            "recommended-by": null,
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": true,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "When Marnie Was There",
@@ -94,9 +100,10 @@
             "grade-gabriela": 6,
             "strong-points": "Anna paints; It's gay",
             "weak-points": "Turns out it's gay in a wrong way",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Nausicaä of the Valley of the Wind",
@@ -107,10 +114,11 @@
             "grade-imdb": 8.0,
             "grade-gabriela": 10,
             "strong-points": "Pikachu pet; Eco-friendly",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": ["Martinho"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Porco Rosso",
@@ -122,9 +130,10 @@
             "grade-gabriela": 8,
             "strong-points": "Planes fight",
             "weak-points": "No need for romance",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Don't Look Up",
@@ -136,9 +145,10 @@
             "grade-gabriela": 6,
             "strong-points": "Very relatable on politics context",
             "weak-points": "Too long",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Ponyo",
@@ -150,9 +160,10 @@
             "grade-gabriela": 8,
             "strong-points": "Good story; Amazing father who wants to rule the world",
             "weak-points": "Apparently the father was wrong and people are in favor of children romance. I'm still on the father's side tho",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Princess Mononoke",
@@ -163,10 +174,11 @@
             "grade-imdb": 8.4,
             "grade-gabriela": 10,
             "strong-points": "Great story; Wolves; Eco-friendly;",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": ["Martinho", "Marina"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Castle in the Sky",
@@ -177,10 +189,11 @@
             "grade-imdb": 8.0,
             "grade-gabriela": 10,
             "strong-points": "Great story; Chaising on train tracks; There's a fucking castle in the sky; Eco-friendly; Cute romance",
-            "weak-points": null,
-            "recommended-by": null,
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "tick, tick...BOOM!",
@@ -192,9 +205,10 @@
             "grade-gabriela": 3,
             "strong-points": "The story initial proposal is interesting; Transgender actress",
             "weak-points": "Too long; Too dramatic; He makes lots of wrong choices; I didn't like any songs",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "The Lord of the Rings: The Fellowship of the Ring (Extended)",
@@ -206,9 +220,10 @@
             "grade-gabriela": 10,
             "strong-points": "Bilbo dissapearing in his own birthday party; All characters are amazing; Great story; Strider carrying 4 Hobbits in his back all the way; Frodo is brave; \"You shall not pass\" best scene; Legolas we love you",
             "weak-points": "Frodo and Sam get to Mordor's border by the end of the movie. How come there are 2 more movies?; Rewatching it, I see how everything is poorly explained; Gandalf dies, can't believe it. Now, they're never gonna make it.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": true,
-            "plataform": "DVD"
+            "plataform": "DVD",
+            "top": false
         },
         {
             "title": "The Lord of the Rings: The Two Towers (Extended)",
@@ -220,9 +235,10 @@
             "grade-gabriela": 10,
             "strong-points": "Gollum finally appears and it's good CG even now; Gandalf resurrects; Frodo finds out he's nothing without Sam; The battle of Helm's Deeps is amazing;",
             "weak-points": "Frodo is an idiot, but we know it's because of the Ring ok?; Frodo and Sam manage to regress in Mordor's path; Frodo, please stop believing Gollum, I beg you.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": true,
-            "plataform": "DVD"
+            "plataform": "DVD",
+            "top": false
         },
         {
             "title": "The Lord of the Rings: The Return of the King (Extended)",
@@ -234,9 +250,10 @@
             "grade-gabriela": 10,
             "strong-points": "Finally understood that Helm's Deep and Minas Tirith are different places; The Fellowship of the Ring finally succeeds. The Ring is destroyed!; Faramir is saved; The lady kills a fucking Nazgul and Witch-King; Great battle; Sam literally carries Frodo to the volcano, best character; I love the Smeagol transformation scene",
             "weak-points": "Frodo goes to Valinor. Not necessary. I wanted him to marry Sam and be happily ever after.",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": true,
-            "plataform": "DVD"
+            "plataform": "DVD",
+            "top": false
         },
         {
             "title": "Everything Everywhere All at Once",
@@ -247,7 +264,7 @@
             "grade-imdb": 8.1,
             "grade-gabriela": 10,
             "strong-points": "Sausage fingers; The end of the world bagel; Multiverse;",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": ["Pedro"],
             "rewatch": false,
             "plataform": "Cinema",
@@ -263,9 +280,10 @@
             "grade-gabriela": 7,
             "strong-points": "Benedict Cumberbatch; Doctor Strange becomes a zombie; Multiverse",
             "weak-points": "The girl could have fought from the beggining",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Cinema"
+            "plataform": "Cinema",
+            "top": false
         },
         {
             "title": "The Batman",
@@ -277,9 +295,10 @@
             "grade-gabriela": 6,
             "strong-points": "Robert Pattinson; Black makeup scene; Good story",
             "weak-points": "Too long; No need for romance",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Cinema"
+            "plataform": "Cinema",
+            "top": false
         },
         {
             "title": "Top Gun: Maverick",
@@ -291,9 +310,10 @@
             "grade-gabriela": 6,
             "strong-points": "Good action movie; Planes; Maverick flying to show his students how to do and survive the mission",
             "weak-points": "Too long; No need for romance",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Cinema"
+            "plataform": "Cinema",
+            "top": false
         },
         {
             "title": "Nope",
@@ -304,8 +324,8 @@
             "grade-imdb": 6.9,
             "grade-gabriela": 10,
             "strong-points": "Timeless movie; Jordan Peele; The plot twist is great; The fighting is great; Great story; Good pacing; Artistical;",
-            "weak-points": null,
-            "recommended-by": null,
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
             "plataform": "Cinema",
             "top": true
@@ -319,10 +339,11 @@
             "grade-imdb": 6.2,
             "grade-gabriela": 10,
             "strong-points": "Great plot twist, even tho I foresaw it; Good horror movie;",
-            "weak-points": null,
-            "recommended-by": null,
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "TV"
+            "plataform": "TV",
+            "top": false
         },
         {
             "title": "Hocus Pocus 2",
@@ -332,11 +353,12 @@
             "genres": ["comedy", "family", "fantasy"],
             "grade-imdb": 6.0,
             "grade-gabriela": 7,
-            "strong-points": null,
-            "weak-points": null,
-            "recommended-by": null,
+            "strong-points": "",
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Friend's platform"
+            "plataform": "Friend's platform",
+            "top": false
         },
         {
             "title": "Winter Boy",
@@ -347,10 +369,11 @@
             "grade-imdb": 6.0,
             "grade-gabriela": 7,
             "strong-points": "Gay",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": ["Pedro Martin"],
             "rewatch": false,
-            "plataform": "Cinema"
+            "plataform": "Cinema",
+            "top": false
         },
         {
             "title": "Fresh",
@@ -361,14 +384,14 @@
             "grade-imdb": 6.7,
             "grade-gabriela": 10,
             "strong-points": "Great horror movie; Never date white man, good chance they are psycopaths; I like the way they fought their way out",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": ["Pedro"],
             "rewatch": false,
             "plataform": "Friend's platform",
             "top": true
         }
     ],
-    "tv-shows": [
+    "tv_shows": [
         {
             "title": "Wednesday",
             "season": 1,
@@ -380,7 +403,7 @@
             "grade-imdb": 8.3,
             "grade-gabriela": 10,
             "strong-points": "Wednesday's clothing style is amazing; I knew from the beggining Tyler was the one; Great teen romance",
-            "weak-points": null,
+            "weak-points": "",
             "recommended-by": ["Anika"],
             "rewatch": false,
             "plataform": "Netflix",
@@ -400,7 +423,8 @@
             "weak-points": "The season does not close 100% tho cause Anzu does not choose one Ikeman in the end",
             "recommended-by": ["Anika"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Stranger Things",
@@ -413,8 +437,8 @@
             "grade-imdb": 8.7,
             "grade-gabriela": 10,
             "strong-points": "Millie Bobby Brown; Running up that hill song sticks to your head forever; Eddie is amazing, go Hellfire club!; Jim fucking amazing escaping a Russian prision",
-            "weak-points": null,
-            "recommended-by": null,
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
             "plataform": "Netflix",
             "top": true
@@ -433,7 +457,8 @@
             "weak-points": "The first episodes are terrible; The war takes too long; Sakura sucks until the very end; Toby should be in Die Hard",
             "recommended-by": ["Thiago", "Phil (my tattoo artist)", "probably more people"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Maid",
@@ -445,11 +470,12 @@
             "genres": ["drama"],
             "grade-imdb": 8.4,
             "grade-gabriela": 1,
-            "strong-points": null,
+            "strong-points": "",
             "weak-points": "Too dramatic; She only suffers and makes bad choices",
             "recommended-by": ["Pedro"],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Love on the Spectrum",
@@ -462,10 +488,11 @@
             "grade-imdb": 8.6,
             "grade-gabriela": 7,
             "strong-points": "So cute. Don't know why I stopped watching",
-            "weak-points": null,
-            "recommended-by": null,
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Old Enough!",
@@ -478,10 +505,11 @@
             "grade-imdb": 8.2,
             "grade-gabriela": 6,
             "strong-points": "Little kids failing to do tasks requested by their parents",
-            "weak-points": null,
-            "recommended-by": null,
+            "weak-points": "",
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Is It Cake?",
@@ -495,9 +523,10 @@
             "grade-gabriela": 5,
             "strong-points": "Cakes; You never know which one is real or cake",
             "weak-points": "Host is annoying; My fav candidate lost and I stopped watching",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "Turning Point: 9/11 and the War on Terror",
@@ -511,9 +540,10 @@
             "grade-gabriela": 4,
             "strong-points": "Tells some interesting things about the 9/11",
             "weak-points": "Too long",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
-            "plataform": "Netflix"
+            "plataform": "Netflix",
+            "top": false
         },
         {
             "title": "The Lord of the Rings: The Rings of Power",
@@ -527,7 +557,7 @@
             "grade-gabriela": 10,
             "strong-points": "Galadriel does not die even against a volcano; Halbrand is an amazing name and he's so cool; You will not believe which character is Sauron; Main Hobbit has algae name. Claps for Nori; Wordart is back (and thanks I needed that explanation); Great pacing; Elrond is beautiful",
             "weak-points": "LOTR requires a fucking degree to catch up to the story. I did not recall any characters from the movies. Had to rewatch the movies to get context; Wanna see the productors make Elrond decay that much until Sauron's death",
-            "recommended-by": null,
+            "recommended-by": [],
             "rewatch": false,
             "plataform": "Amazon Prime",
             "top": true

@@ -41,7 +41,15 @@ ReactDOM.render(
           }
         />
         <Route
-          path="project/movies/top-movies"
+          path="project/movies/:year"
+          element={
+            <IntlProvider locale="en">
+              <Movies />
+            </IntlProvider>
+          }
+        />
+        <Route
+          path="project/movies/top-movies/:year"
           element={
             <IntlProvider locale="en">
               <TopMovies />
@@ -49,7 +57,7 @@ ReactDOM.render(
           }
         />
         <Route
-          path="project/movies/top-tv-shows"
+          path="project/movies/top-tv-shows/:year"
           element={
             <IntlProvider locale="en">
               <TopTVShows />
@@ -57,7 +65,7 @@ ReactDOM.render(
           }
         />
         <Route
-          path="project/movies/all-movies"
+          path="project/movies/all-movies/:year"
           element={
             <IntlProvider locale="en">
               <AllMovies />
@@ -65,7 +73,7 @@ ReactDOM.render(
           }
         />
         <Route
-          path="project/movies/all-tv-shows"
+          path="project/movies/all-tv-shows/:year"
           element={
             <IntlProvider locale="en">
               <AllTVShows />
