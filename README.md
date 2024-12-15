@@ -4,12 +4,19 @@ This is a react app project for my portfolio.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Running the project
+### Requirements
+- Node
+- Yarn
 
+### Setup
 ```bash
+$ yarn install
+```
 
+### Running the project
+```bash
+$ export NODE_OPTIONS=--openssl-legacy-provider
 $ yarn start
-
 ```
 
 ### Links
