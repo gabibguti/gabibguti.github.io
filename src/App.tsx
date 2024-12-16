@@ -43,7 +43,7 @@ export function App(): ReactElement {
           <StatsCards cards={cards} />
         </div>
         {/* <div className='flex flex-row w-full my-5'> */}
-        <img src="assets/DSC01019.JPG" alt="Gabriela in Central Park, New York" className='h-auto w-40 p-5 w-full sm:w-2/3 rounded-large' />
+        <img src="https://raw.githubusercontent.com/gabibguti/gabibguti.github.io/refs/heads/main/src/assets/DSC01019.JPG" alt="Gabriela in Central Park, New York" className='h-auto w-40 p-5 w-full sm:w-2/3 rounded-large' />
         {/* </div> */}
         <div className='flex flex-col p-5 font-martian-mono w-full'>
           <span className="text-lg text-rose">
