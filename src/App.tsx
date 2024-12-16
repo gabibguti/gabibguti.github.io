@@ -5,6 +5,7 @@ import { IconLinkedIn } from './assets/IconLinkedIn'
 import { StatsCards } from './home/StatsCards'
 import { Stats } from './home/home'
 import NewYorkImage from './assets/DSC01019.JPG'
+import IconChevron from './assets/IconChevron'
 
 export function App(): ReactElement {
   const cards: Stats[] = [
@@ -15,7 +16,7 @@ export function App(): ReactElement {
   return (
     <div className="flex flex-col w-screen">
       <div className="flex flex-col text-center justify-center items-center h-full">
-        <span className="font-gloock uppercase text-dark-ruby text-9xl font-light m-12">
+        <span className="font-gloock uppercase text-dark-ruby text-6xl sm:text-9xl font-light m-12">
           Gabriela
         </span>
         <div className="text-white p-5 w-full bg-midnight-sky">
@@ -39,28 +40,30 @@ export function App(): ReactElement {
             </div>
           </div>
         </div>
-        <div className="flex flex-row m-8 w-1/2">
+        <div className="flex flex-row p-5 sm:p-8 w-full sm:w-2/3">
           <StatsCards cards={cards} />
         </div>
         {/* <div className='flex flex-row w-full my-5'> */}
-        <img src={NewYorkImage} alt="Gabriela in Central Park, New York" className='h-auto w-40 mb-5 w-1/2 rounded-3xl' />
+        <img src={NewYorkImage} alt="Gabriela in Central Park, New York" className='h-auto w-40 p-5 w-full sm:w-2/3 rounded-large' />
         {/* </div> */}
-        <div className='flex flex-col m-8 font-martian-mono'>
+        <div className='flex flex-col p-5 font-martian-mono w-full'>
           <span className="text-lg text-rose">
             Uncover my little personal projects: a retrospective of my favorite movies and a weather forecast.
           </span>
-          <div className="grid grid-flow-row grid-row-2 gap-3 mt-6 self-center w-1/3">
+          <div className="grid grid-flow-row grid-row-2 gap-3 mt-6 self-center w-full sm:w-1/2">
             <Link
               to="/project/movies"
-              className="bg-rose text-white py-2 px-4 rounded-full"
+              className="bg-rose text-white py-4 px-6 rounded-full fill-current flex flex-row justify-between"
             >
-              Movies
+              <span>Movies</span>
+              <IconChevron />
             </Link>
             <Link
               to="/project/weather-forecast"
-              className="ring-rose ring-2 text-rose py-2 px-4 rounded-full"
+              className="ring-rose ring-2 text-rose py-4 px-6 rounded-full fill-current flex flex-row justify-between"
             >
-              Weather Forecast
+              <span>Weather Forecast</span>
+              <IconChevron />
             </Link>
           </div>
         </div>

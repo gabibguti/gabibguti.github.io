@@ -6,7 +6,7 @@ export function StatsCard({stats}: {stats: Stats}): ReactElement {
     return (
         <div className='flex flex-col items-start'>
             <span className='font-gloock text-4xl'>{number}</span>
-            <span className='font-martian-mono text-1xl'>{name}</span>
+            <span className='font-martian-mono text-1xl text-left'>{name}</span>
         </div>
     )
 }

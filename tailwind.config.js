@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         'midnight-sky': '#291720',
         'rose': '#D90368',
+      },
+      borderRadius: {
+        'large': '3rem',
       }
     },
     fontFamily: {
