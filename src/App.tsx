@@ -4,7 +4,6 @@ import { IconGitHub } from './assets/IconGitHub'
 import { IconLinkedIn } from './assets/IconLinkedIn'
 import { StatsCards } from './home/StatsCards'
 import { Stats } from './home/home'
-import NewYorkImage from './assets/DSC01019.JPG'
 import IconChevron from './assets/IconChevron'
 
 export function App(): ReactElement {
@@ -44,7 +43,7 @@ export function App(): ReactElement {
           <StatsCards cards={cards} />
         </div>
         {/* <div className='flex flex-row w-full my-5'> */}
-        <img src={NewYorkImage} alt="Gabriela in Central Park, New York" className='h-auto w-40 p-5 w-full sm:w-2/3 rounded-large' />
+        <img src="assets/DSC01019.JPG" alt="Gabriela in Central Park, New York" className='h-auto w-40 p-5 w-full sm:w-2/3 rounded-large' />
         {/* </div> */}
         <div className='flex flex-col p-5 font-martian-mono w-full'>
           <span className="text-lg text-rose">
