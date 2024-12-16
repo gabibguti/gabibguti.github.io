@@ -10,7 +10,7 @@ export function App(): ReactElement {
   const cards: Stats[] = [
     { name: 'Years as SWE', number: 4 },
     { name: 'Theater plays', number: 2 },
-    { name: 'Visited countries', number: 11 },
+    { name: 'Countries visited', number: 11 },
   ]
   return (
     <div className="flex flex-col w-screen">
