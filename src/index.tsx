@@ -18,6 +18,14 @@ import { TopMoviesFromAllTime } from './movies/TopMoviesFromAllTime'
 const queryClient = new QueryClient()
 
 ReactDOM.render(
+  <>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
   <React.StrictMode>
     <Router>
       <Routes>
@@ -90,7 +98,9 @@ ReactDOM.render(
         />
       </Routes>
     </Router>
-  </React.StrictMode>,
+  </React.StrictMode>
+  </body>
+  </>,
   document.getElementById('root')
 )
 
