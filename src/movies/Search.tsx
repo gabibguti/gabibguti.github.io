@@ -8,11 +8,11 @@ export function Search({
 }): ReactElement {
     const [value, setValue] = useState<string>("")
     return (
-        <label className="relative block">
+        <label className="relative block w-1/2">
             <span className="absolute inset-y-0 left-0 flex items-center pl-4 fill-current">
                 <IconSearch />
             </span>
-            <input className='w-1/2 ring-moss-green ring-1 rounded-full text-2xl px-6 py-4 pl-16'
+            <input className='w-full ring-moss-green ring-1 rounded-full text-2xl px-6 py-4 pl-16'
                 onChange={(e) => {
                     setValue(e.target.value)
                 }}

@@ -1,18 +1,13 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 import { Link, useNavigate, useParams } from 'react-router-dom'
+import IconChevronLeft from '../assets/IconChevronLeft'
+import bestmovies from './best-movies.json'
+import { Chips, SelectType } from './Chips'
 import movies2022 from './movies-2022.json'
 import movies2023 from './movies-2023.json'
-import bestmovies from './best-movies.json'
-import { Section } from './Section'
-import { TotalizerBox } from './TotalizerBox'
-import { Year } from './Year'
-import IconChevronLeft from '../assets/IconChevronLeft'
-import { Search } from './Search'
 import { useGetMovie } from './movieService'
-import Spinner from '../utils/Spinner'
-import { MoviesTable } from './MoviesTable'
-import { Movie, TVShow } from './movie'
 import { Reviews } from './Reviews'
+import { Search } from './Search'
 
 export const MOVIES = {
   "2023": movies2023,
@@ -30,6 +25,7 @@ export function Movies(): ReactElement {
   const params = useParams()
 
   const [searchedMovie, setSearchedMovie] = useState<string>("")
+  const [selected, setSelected] = useState<SelectType>({"movie": true, "tv-show": false})
   const { data, isLoading } = useGetMovie(searchedMovie);
 
   const [year, setYear] = useState<YEAR>(params.year as YEAR ?? DEFAULT_YEAR);
@@ -99,8 +95,9 @@ export function Movies(): ReactElement {
         </span>
       </div>
       <div className='flex flex-col p-5 bg-light-yellow text-moss-green'>
-        <div className='pb-5'>
-          <Search searchMovie={setSearchedMovie} />
+        <div className='flex flex-row pb-5 w-full'>
+            <Search searchMovie={setSearchedMovie} />
+            <Chips selected={selected} setSelected={setSelected} />
         </div>
         <Reviews isLoading={isLoading} data={data} />
       </div>
