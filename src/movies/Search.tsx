@@ -2,9 +2,9 @@ import React, { ReactElement, useState } from 'react'
 import IconSearch from '../assets/IconSearch';
 
 export function Search({
-    searchMovie,
+    search,
 }: {
-    searchMovie: (movieName: string) => void,
+    search: (movieName: string) => void,
 }): ReactElement {
     const [value, setValue] = useState<string>("")
     return (
@@ -18,7 +18,7 @@ export function Search({
                 }}
                 onKeyDown={(e) => {
                     if (e.key === 'Enter') {
-                        searchMovie(value)
+                        search(value)
                     }
                 }}
                 placeholder="Search for a movie or TV show"

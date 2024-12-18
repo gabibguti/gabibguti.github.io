@@ -27,7 +27,7 @@ export interface SearchMovie {
     vote_average: number; // The average vote rating of the movie.
 }
 
-export function useGetMovie(movieName: string) {
+export function useGetMovie(name: string) {
     const init: RequestInit = {
         headers: {
             accept: 'application/json',
@@ -37,7 +37,7 @@ export function useGetMovie(movieName: string) {
 
     const searchParams: Record<string, any> = new URLSearchParams();
 
-    searchParams.append("query", movieName)
+    searchParams.append("query", name)
     searchParams.append("include_adult", false)
     searchParams.append("language", "en-US")
     searchParams.append("page", 1)
@@ -47,7 +47,34 @@ export function useGetMovie(movieName: string) {
     baseUrl.search = searchParams.toString();
 
     return useQuery<SearchMovieResponse, Error>(
-        ['movies', movieName],
+        ['movies', name],
+        () =>
+            fetcher<SearchMovieResponse>(baseUrl.toString(), init),
+        {}
+    )
+}
+
+export function useGetTVShow(name: string) {
+    const init: RequestInit = {
+        headers: {
+            accept: 'application/json',
+            Authorization: 'Bearer ' + API_KEY
+        }
+    }
+
+    const searchParams: Record<string, any> = new URLSearchParams();
+
+    searchParams.append("query", name)
+    searchParams.append("include_adult", false)
+    searchParams.append("language", "en-US")
+    searchParams.append("page", 1)
+
+    const baseUrl = new URL("https://api.themoviedb.org/3/search/tv");
+
+    baseUrl.search = searchParams.toString();
+
+    return useQuery<SearchMovieResponse, Error>(
+        ['tv_show', name],
         () =>
             fetcher<SearchMovieResponse>(baseUrl.toString(), init),
         {}

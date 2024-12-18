@@ -1,4 +1,4 @@
-import React, { ReactElement, useState } from 'react'
+import React, { ReactElement } from 'react'
 import IconCheck from '../assets/IconCheck'
 import IconClose from '../assets/IconClose'
 
