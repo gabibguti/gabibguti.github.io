@@ -11,6 +11,7 @@ import { Search } from './Search'
 import { useGetMovie } from './movieService'
 import Spinner from '../utils/Spinner'
 import { MoviesTable } from './MoviesTable'
+import { Movie, TVShow } from './movie'
 
 export const MOVIES = {
   "2023": movies2023,
@@ -22,7 +23,7 @@ export type YEAR = keyof typeof MOVIES
 
 const YEARS: YEAR[] = ["2023", "2022", "All"]
 
-const DEFAULT_YEAR: YEAR = "2023"
+const DEFAULT_YEAR: YEAR = "2022"
 
 export function Movies(): ReactElement {
   const params = useParams()
@@ -125,8 +126,24 @@ export function Movies(): ReactElement {
                 <div className='grid grid-flow-cols grid-cols-4 gap-6 w-full'>
                   {data?.results.slice(0, 8).map(movie =>
                     <div className='flex flex-col items-center'>
-                      <img className='w-40' src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}></img>
+                      <img
+                        className={
+                          MOVIES["2022"].movies.filter(dbMovie => {
+                            console.log(dbMovie['title'])
+                            if (Object.keys(dbMovie).includes("tmdb-id")) {
+                              const dbMovieTemp = dbMovie as Movie
+                              console.log(dbMovieTemp['tmdb-id'])
+                              return dbMovieTemp['tmdb-id'] === movie.id
+                            }
+                            return false
+                        }).length > 0 ?
+                            'w-40 rounded-lg' :
+                            'w-40 rounded-lg filter grayscale'
+                        }
+                        src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
+                      />
                       <span>{movie.original_title}</span>
+                      <span>{movie.id}</span>
                     </div>
                   )}
                 </div>
