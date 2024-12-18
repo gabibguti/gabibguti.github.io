@@ -12,6 +12,7 @@ import { useGetMovie } from './movieService'
 import Spinner from '../utils/Spinner'
 import { MoviesTable } from './MoviesTable'
 import { Movie, TVShow } from './movie'
+import { Reviews } from './Reviews'
 
 export const MOVIES = {
   "2023": movies2023,
@@ -61,18 +62,6 @@ export function Movies(): ReactElement {
     (totalMoviesMinWatched + totalTVShowsMinWatched) / 60
   )
 
-  const searchMovie = (movieName: string) => {
-    setSearchedMovie(movieName)
-    // if(!movieName) {
-    //   setDisplayedMovies(MOVIES[year].movies.slice(0,5))
-    //   return
-    // }
-    // const matchMovies = movies.movies.filter(movie => movie.title.includes(movieName))
-    // setDisplayedMovies(matchMovies)
-  }
-
-
-
   return (
     <div className="flex flex-col w-screen">
       <div className='flex flex-col bg-light-yellow items-center justify-center font-staatliches py-5'>
@@ -111,51 +100,10 @@ export function Movies(): ReactElement {
       </div>
       <div className='flex flex-col p-5 bg-light-yellow text-moss-green'>
         <div className='pb-5'>
-          <Search searchMovie={searchMovie} />
+          <Search searchMovie={setSearchedMovie} />
         </div>
-        {isLoading ? (
-          <Spinner />
-        ) : (
-          <>
-            {
-              (!data || data.total_results === 0) ? (
-                <span className='h-60 border-2 border-dotted border-dark-forest rounded-large content-center text-center text-dark-forest text-4xl'>
-                  No results.
-                </span>
-              ) : (
-                <div className='grid grid-flow-cols grid-cols-4 gap-6 w-full'>
-                  {data?.results.slice(0, 8).map(movie =>
-                    <div className='flex flex-col items-center'>
-                      <img
-                        className={
-                          MOVIES["2022"].movies.filter(dbMovie => {
-                            console.log(dbMovie['title'])
-                            if (Object.keys(dbMovie).includes("tmdb-id")) {
-                              const dbMovieTemp = dbMovie as Movie
-                              console.log(dbMovieTemp['tmdb-id'])
-                              return dbMovieTemp['tmdb-id'] === movie.id
-                            }
-                            return false
-                        }).length > 0 ?
-                            'w-40 rounded-lg' :
-                            'w-40 rounded-lg filter grayscale'
-                        }
-                        src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`}
-                      />
-                      <span>{movie.original_title}</span>
-                      <span>{movie.id}</span>
-                    </div>
-                  )}
-                </div>
-              )
-            }
-          </>
-        )
-        }
+        <Reviews isLoading={isLoading} data={data} />
       </div>
-      {/* <div className='flex flex-row justify-center p-5 bg-dark-forest'>
-        <img src="https://images-prod.dazeddigital.com/1200/0-0-1677-1118/azure/dazed-prod/1120/2/1122563.jpg" className='rounded-large w-1/3 h-auto' alt="Spinner in motion on a table from the movie Inception."></img>
-      </div> */}
     </div >
     // <div className="bg-gradient-to-r from-aero-blue to-light-blue flex flex-col w-screen min-h-screen h-full p-9">
     //   <div className="flex flex-col items-center h-full">

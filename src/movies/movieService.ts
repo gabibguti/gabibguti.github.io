@@ -3,7 +3,7 @@ import { fetcher } from "../utils/fetcher";
 
 const API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMjI1ZDBkOTEyZjhmZGEyYjZmNTIzNWY5OGFiNGI4ZiIsIm5iZiI6MTczNDQ4NjE1OS43MzUwMDAxLCJzdWIiOiI2NzYyMjg4ZjhkMWNmZGM1MjI0YTFkNTgiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.tK0Lomsyb7GQBYlE7wDTc2KUDXR3V-2lO2Y1s4Necxk"
 
-interface SearchMovieResponse {
+export interface SearchMovieResponse {
     page: number; // The page number of the results.
     total_results: number; // The total number of results available.
     total_pages: number; // The total number of pages of results.
