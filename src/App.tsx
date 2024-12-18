@@ -4,7 +4,7 @@ import { IconGitHub } from './assets/IconGitHub'
 import { IconLinkedIn } from './assets/IconLinkedIn'
 import { StatsCards } from './home/StatsCards'
 import { Stats } from './home/home'
-import IconChevron from './assets/IconChevron'
+import IconChevronRight from './assets/IconChevronRight'
 
 export function App(): ReactElement {
   const cards: Stats[] = [
@@ -42,9 +42,7 @@ export function App(): ReactElement {
         <div className="flex flex-row p-5 sm:p-8 w-full sm:w-2/3">
           <StatsCards cards={cards} />
         </div>
-        {/* <div className='flex flex-row w-full my-5'> */}
-        <img src="https://raw.githubusercontent.com/gabibguti/gabibguti.github.io/refs/heads/main/src/assets/DSC01019.JPG" alt="Gabriela in Central Park, New York" className='h-auto w-40 p-5 w-full sm:w-2/3 rounded-large' />
-        {/* </div> */}
+        <img src="https://raw.githubusercontent.com/gabibguti/gabibguti.github.io/refs/heads/main/src/assets/DSC01019.JPG" alt="Gabriela in Central Park, New York" className='h-auto p-5 w-full sm:w-2/3 rounded-large' />
         <div className='flex flex-col p-5 font-martian-mono w-full'>
           <span className="text-lg text-rose">
             Uncover my little personal projects: a retrospective of my favorite movies and a weather forecast.
@@ -55,14 +53,14 @@ export function App(): ReactElement {
               className="bg-rose text-white py-4 px-6 rounded-full fill-current flex flex-row justify-between"
             >
               <span>Movies</span>
-              <IconChevron />
+              <IconChevronRight />
             </Link>
             <Link
               to="/project/weather-forecast"
               className="ring-rose ring-2 text-rose py-4 px-6 rounded-full fill-current flex flex-row justify-between"
             >
               <span>Weather Forecast</span>
-              <IconChevron />
+              <IconChevronRight />
             </Link>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 
-function IconChevron(): ReactElement {
+function IconChevronRight(): ReactElement {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -13,4 +13,4 @@ function IconChevron(): ReactElement {
     )
 }
 
-export default IconChevron;
+export default IconChevronRight;

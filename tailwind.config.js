@@ -6,14 +6,20 @@ module.exports = {
       colors: {
         'midnight-sky': '#291720',
         'rose': '#D90368',
+        'light-yellow': '#FFFBDB',
+        'moss-green': '#625834',
+        'dark-forest': '#30362F',
+        'olive-green': '#A59132',
       },
       borderRadius: {
-        'large': '3rem',
+        'large': '2rem',
       }
     },
     fontFamily: {
       gloock: ['Gloock', 'serif'],
-      'martian-mono': ['Martian Mono', 'monospace'] ,      
+      'martian-mono': ['Martian Mono', 'monospace'] ,
+      staatliches: ['Staatliches', 'serif'],
+      nunito: ['Nunito', 'serif'],
     },
     gradientColorStops: (theme) => ({
       ...theme('colors'),
@@ -34,6 +40,7 @@ module.exports = {
       'light-blue': '#A6CFD5',
       'aero-blue': '#C2E7D9',
       'rose': '#D90368',
+      'moss-green': '#625834',
     }),
   },
   variants: {

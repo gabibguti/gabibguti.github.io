@@ -19,87 +19,90 @@ const queryClient = new QueryClient()
 
 ReactDOM.render(
   <>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet" />
-  </head>
-  <body>
-  <React.StrictMode>
-    <Router>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route
-          path="/project/weather-forecast"
-          element={
-            <QueryClientProvider client={queryClient}>
-              <IntlProvider locale="en">
-                <WeatherForecast />
-              </IntlProvider>
-            </QueryClientProvider>
-          }
-        />
-        <Route
-          path="project/movies"
-          element={
-            <IntlProvider locale="en">
-              <Movies />
-            </IntlProvider>
-          }
-        />
-        <Route
-          path="project/movies/:year"
-          element={
-            <IntlProvider locale="en">
-              <Movies />
-            </IntlProvider>
-          }
-        />
-        <Route
-          path="project/movies/top-movies/:year"
-          element={
-            <IntlProvider locale="en">
-              <TopMovies />
-            </IntlProvider>
-          }
-        />
-        <Route
-          path="project/movies/top-tv-shows/:year"
-          element={
-            <IntlProvider locale="en">
-              <TopTVShows />
-            </IntlProvider>
-          }
-        />
-        <Route
-          path="project/movies/all-movies/:year"
-          element={
-            <IntlProvider locale="en">
-              <AllMovies />
-            </IntlProvider>
-          }
-        />
-        <Route
-          path="project/movies/all-tv-shows/:year"
-          element={
-            <IntlProvider locale="en">
-              <AllTVShows />
-            </IntlProvider>
-          }
-        />
-        <Route
-          path="project/movies/top-movies-all-time"
-          element={
-            <IntlProvider locale="en">
-              <TopMoviesFromAllTime />
-            </IntlProvider>
-          }
-        />
-      </Routes>
-    </Router>
-  </React.StrictMode>
-  </body>
+    <head>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Martian+Mono:wght@100..800&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Martian+Mono:wght@100..800&family=Staatliches&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Martian+Mono:wght@100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Staatliches&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+      <QueryClientProvider client={queryClient}>
+        <React.StrictMode>
+          <Router>
+            <Routes>
+              <Route path="/" element={<App />} />
+              <Route
+                path="/project/weather-forecast"
+                element={
+
+                  <IntlProvider locale="en">
+                    <WeatherForecast />
+                  </IntlProvider>
+                }
+              />
+              <Route
+                path="project/movies"
+                element={
+                  <IntlProvider locale="en">
+                    <Movies />
+                  </IntlProvider>
+                }
+              />
+              <Route
+                path="project/movies/:year"
+                element={
+                  <IntlProvider locale="en">
+                    <Movies />
+                  </IntlProvider>
+                }
+              />
+              <Route
+                path="project/movies/top-movies/:year"
+                element={
+                  <IntlProvider locale="en">
+                    <TopMovies />
+                  </IntlProvider>
+                }
+              />
+              <Route
+                path="project/movies/top-tv-shows/:year"
+                element={
+                  <IntlProvider locale="en">
+                    <TopTVShows />
+                  </IntlProvider>
+                }
+              />
+              <Route
+                path="project/movies/all-movies/:year"
+                element={
+                  <IntlProvider locale="en">
+                    <AllMovies />
+                  </IntlProvider>
+                }
+              />
+              <Route
+                path="project/movies/all-tv-shows/:year"
+                element={
+                  <IntlProvider locale="en">
+                    <AllTVShows />
+                  </IntlProvider>
+                }
+              />
+              <Route
+                path="project/movies/top-movies-all-time"
+                element={
+                  <IntlProvider locale="en">
+                    <TopMoviesFromAllTime />
+                  </IntlProvider>
+                }
+              />
+            </Routes>
+          </Router>
+        </React.StrictMode>
+      </QueryClientProvider>
+    </body>
   </>,
   document.getElementById('root')
 )
