@@ -1,16 +1,18 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 import { FormattedList } from 'react-intl'
 import Spinner from '../utils/Spinner'
-import { SelectType } from './Chips'
+import { SelectType, Type } from './Chips'
 import { Movie, TVShow } from './movie'
 import LOCAL_DATABASE from './movies.json'
 import {
+  Genre,
   GenreResponse,
-  SearchMovie,
+  MovieDetailsResponse,
   SearchMovieResponse,
-  SearchTvShow,
   SearchTvShowResponse,
+  TvShowDetailsResponse,
   useGetMovieDetails,
+  useGetTVShowDetails
 } from './movieService'
 
 interface ReviewResult {
@@ -18,7 +20,8 @@ interface ReviewResult {
   original_title: string
   poster_path: string | null
   release_date: string | null
-  genre_ids: number[]
+  genres: Genre[]
+  runtime?: number
   'grade-imdb'?: number
   'grade-gabriela'?: number
   'strong-points'?: string | null
@@ -28,7 +31,15 @@ interface ReviewResult {
   top?: boolean
 }
 
-function buildReviewResultFromSearchMovie(value: SearchMovie): ReviewResult {
+function hasReview(id: number) {
+  const localMovies = LOCAL_DATABASE.movies as { [key: string]: Movie }
+  const localTVShows = LOCAL_DATABASE.tv_shows as { [key: string]: TVShow }
+  return String(id) in localMovies || String(id) in localTVShows
+}
+
+function buildReviewResultFromSearchMovie(
+  value: MovieDetailsResponse
+): ReviewResult {
   const localMovies = LOCAL_DATABASE.movies as { [key: string]: Movie }
   const review =
     String(value.id) in localMovies ? localMovies[String(value.id)] : undefined
@@ -38,7 +49,8 @@ function buildReviewResultFromSearchMovie(value: SearchMovie): ReviewResult {
     original_title: value.original_title,
     poster_path: value.poster_path,
     release_date: value.release_date,
-    genre_ids: value.genre_ids,
+    genres: value.genres,
+    runtime: value.runtime,
     'grade-imdb': review?.['grade-imdb'],
     'grade-gabriela': review?.['grade-gabriela'],
     'strong-points': review?.['strong-points'],
@@ -49,7 +61,9 @@ function buildReviewResultFromSearchMovie(value: SearchMovie): ReviewResult {
   }
 }
 
-function buildReviewResultFromSearchTVShow(value: SearchTvShow): ReviewResult {
+function buildReviewResultFromSearchTVShow(
+  value: TvShowDetailsResponse
+): ReviewResult {
   const localTVShows = LOCAL_DATABASE.tv_shows as { [key: string]: TVShow }
   const review =
     String(value.id) in localTVShows
@@ -61,7 +75,8 @@ function buildReviewResultFromSearchTVShow(value: SearchTvShow): ReviewResult {
     original_title: value.original_name,
     poster_path: value.poster_path,
     release_date: value.first_air_date,
-    genre_ids: value.genre_ids,
+    genres: value.genres,
+    runtime: value.episode_run_time?.[0],
     'grade-imdb': review?.['grade-imdb'],
     'grade-gabriela': review?.['grade-gabriela'],
     'strong-points': review?.['strong-points'],
@@ -79,6 +94,7 @@ export function Reviews({
   tvShowData,
   selected,
   movieGenres,
+  tvShowGenres,
 }: {
   emptyQuery: boolean
   isLoading: boolean
@@ -86,6 +102,7 @@ export function Reviews({
   tvShowData?: SearchTvShowResponse
   selected: SelectType
   movieGenres?: GenreResponse
+  tvShowGenres?: GenreResponse
 }): ReactElement {
   if (isLoading) {
     return (
@@ -109,6 +126,7 @@ export function Reviews({
       tvShowData={tvShowData}
       selected={selected}
       movieGenres={movieGenres}
+      tvShowGenres={tvShowGenres}
     />
   )
 }
@@ -118,19 +136,23 @@ export function ReviewResults({
   tvShowData,
   selected,
   movieGenres,
+  tvShowGenres,
 }: {
   movieData?: SearchMovieResponse
   tvShowData?: SearchTvShowResponse
   selected: SelectType
   movieGenres?: GenreResponse
+  tvShowGenres?: GenreResponse
 }): ReactElement {
-  const [results, setResults] = useState<ReviewResult[]>()
+  const [results, setResults] = useState<{ id: number; type: Type }[]>()
 
   useEffect(() => {
-    let res: ReviewResult[] = []
+    let res: { id: number; type: Type }[] = []
     if (selected.movie && movieData) {
       res = [
-        ...movieData.results.slice(0, 4).map(buildReviewResultFromSearchMovie),
+        ...movieData.results
+          .slice(0, 4)
+          .map((movie) => ({ id: movie.id, type: 'movie' as Type })),
       ]
     }
     if (selected['tv-show'] && tvShowData) {
@@ -138,14 +160,14 @@ export function ReviewResults({
         ...res,
         ...tvShowData.results
           .slice(0, 4)
-          .map(buildReviewResultFromSearchTVShow),
+          .map((tvShow) => ({ id: tvShow.id, type: 'tv-show' as Type })),
       ]
     }
     res.sort((a, b) => {
-      if (a['grade-gabriela']) {
+      if (hasReview(a.id)) {
         return -1
       }
-      if (b['grade-gabriela']) {
+      if (hasReview(b.id)) {
         return 1
       }
       return 0
@@ -163,31 +185,44 @@ export function ReviewResults({
 
   return (
     <div className="grid grid-flow-cols grid-cols-2 gap-6 w-full">
-      {results?.map((reviewResult) => (
-        <ReviewCard reviewResult={reviewResult} movieGenres={movieGenres} />
+      {results?.map((res) => (
+        <ReviewCard
+          result={res}
+          movieGenres={movieGenres}
+          tvShowGenres={tvShowGenres}
+        />
       ))}
     </div>
   )
 }
 
-function ReviewCard({
-  reviewResult,
+export function ReviewCard({
+  result,
   movieGenres,
+  tvShowGenres,
 }: {
-  reviewResult: ReviewResult
+  result: { id: number; type: Type }
   movieGenres?: GenreResponse
+  tvShowGenres?: GenreResponse
 }) {
-  const { data: movieDetails } = useGetMovieDetails(reviewResult.id)
+  const [reviewResult, setReviewResult] = useState<ReviewResult>()
 
-  const genres = reviewResult.genre_ids.reduce<string[]>((acc, genre_id) => {
-    const g = movieGenres?.genres.find((genre) => genre.id === genre_id)
-    if (!g) {
-      return acc
+  const { data: movieDetails } = useGetMovieDetails(result.id)
+  const { data: tvShowDetails } = useGetTVShowDetails(result.id)
+
+  useEffect(() => {
+    if (result.type === 'movie' && movieDetails) {
+      setReviewResult(buildReviewResultFromSearchMovie(movieDetails))
+      return
     }
-    return [...acc, g.name]
-  }, [])
+    if (result.type === 'tv-show' && tvShowDetails) {
+      setReviewResult(buildReviewResultFromSearchTVShow(tvShowDetails))
+    }
+  }, [result, movieDetails, tvShowDetails])
 
-  const isReviewed = !!reviewResult['grade-gabriela']
+  const genres = reviewResult?.genres.map(genre => genre.name)
+
+  const isReviewed = !!reviewResult?.['grade-gabriela']
 
   return (
     <div className="flex flex-row bg-dark-forest text-white rounded-lg p-5">
@@ -195,20 +230,20 @@ function ReviewCard({
         className={`w-48 h-80 object-cover rounded-lg ${
           isReviewed ? '' : 'filter grayscale'
         }`}
-        alt={reviewResult.original_title + ' poster'}
-        src={`https://image.tmdb.org/t/p/w400/${reviewResult.poster_path}`}
+        alt={reviewResult?.original_title + ' poster'}
+        src={`https://image.tmdb.org/t/p/w400/${reviewResult?.poster_path}`}
       />
       <div className="flex flex-col pl-5 w-full">
         <div className="grid grid-cols-7 gap-2 font-nunito">
           <div className="col-span-8">
             <span className="font-staatliches text-3xl pb-2 text-ellipsis overflow-hidden">
-              {reviewResult.original_title}
+              {reviewResult?.original_title}
             </span>
           </div>
           <div className="col-span-8">
             <div className="flex flex-col">
               <div className="flex flex-row gap-2 py-2">
-                {genres.map((genre) => (
+                {genres?.map((genre) => (
                   <div className="text-xs rounded-full px-2 ring-1 ring-white">
                     {genre}
                   </div>
@@ -220,17 +255,17 @@ function ReviewCard({
             <div className="flex flex-col">
               <span className="text-xs">Year</span>
               <span>
-                {reviewResult.release_date
-                  ? new Date(reviewResult.release_date).getFullYear()
+                {reviewResult?.release_date
+                  ? new Date(reviewResult?.release_date).getFullYear()
                   : '-'}
               </span>
             </div>
           </div>
           <div className="col-span-2">
             <div className="flex flex-col">
-              <span className="text-xs">Runtime</span>
+              <span className="text-xs">{result.type === "movie" ? "Runtime" : "EP Runtime"}</span>
               <span>
-                {movieDetails?.runtime ? `${movieDetails?.runtime} min` : '-'}
+                {reviewResult?.runtime ? `${reviewResult?.runtime} min` : '-'}
               </span>
             </div>
           </div>

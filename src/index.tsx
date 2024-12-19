@@ -2,18 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { IntlProvider } from 'react-intl'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'
+import { Route, HashRouter as Router, Routes } from 'react-router-dom'
 import { App } from './App'
 import './index.css'
-import reportWebVitals from './reportWebVitals'
-import { WeatherForecast } from './weather-forecast/WeatherForecast'
 import './main.css'
 import { Movies } from './movies/Movies'
 import { TopMovies } from './movies/TopMovies'
-import { TopTVShows } from './movies/TopTVShows'
-import { AllMovies } from './movies/AllMovies'
-import { AllTVShows } from './movies/AllTVShows'
-import { TopMoviesFromAllTime } from './movies/TopMoviesFromAllTime'
+import reportWebVitals from './reportWebVitals'
+import { WeatherForecast } from './weather-forecast/WeatherForecast'
 
 const queryClient = new QueryClient()
 
@@ -36,7 +32,6 @@ ReactDOM.render(
               <Route
                 path="/project/weather-forecast"
                 element={
-
                   <IntlProvider locale="en">
                     <WeatherForecast />
                   </IntlProvider>
@@ -51,50 +46,10 @@ ReactDOM.render(
                 }
               />
               <Route
-                path="project/movies/:year"
-                element={
-                  <IntlProvider locale="en">
-                    <Movies />
-                  </IntlProvider>
-                }
-              />
-              <Route
-                path="project/movies/top-movies/:year"
+                path="project/movies/top-rated"
                 element={
                   <IntlProvider locale="en">
                     <TopMovies />
-                  </IntlProvider>
-                }
-              />
-              <Route
-                path="project/movies/top-tv-shows/:year"
-                element={
-                  <IntlProvider locale="en">
-                    <TopTVShows />
-                  </IntlProvider>
-                }
-              />
-              <Route
-                path="project/movies/all-movies/:year"
-                element={
-                  <IntlProvider locale="en">
-                    <AllMovies />
-                  </IntlProvider>
-                }
-              />
-              <Route
-                path="project/movies/all-tv-shows/:year"
-                element={
-                  <IntlProvider locale="en">
-                    <AllTVShows />
-                  </IntlProvider>
-                }
-              />
-              <Route
-                path="project/movies/top-movies-all-time"
-                element={
-                  <IntlProvider locale="en">
-                    <TopMoviesFromAllTime />
                   </IntlProvider>
                 }
               />

@@ -1,24 +1,20 @@
 import React, { ReactElement, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import IconChevronLeft from '../assets/IconChevronLeft'
 import IconChevronRight from '../assets/IconChevronRight'
 import IconStar from '../assets/IconStar'
 import { Chips, SelectType } from './Chips'
 import LOCAL_DATABASE from './movies.json'
-import { useGetMovie, useGetMovieGenres, useGetTVShow } from './movieService'
+import { useGetMovie, useGetTVShow } from './movieService'
 import { Reviews } from './Reviews'
 import { Search } from './Search'
 
 export function Movies(): ReactElement {
-  const params = useParams()
-
   const [query, setQuery] = useState<string>('')
   const [selected, setSelected] = useState<SelectType>({
     movie: true,
     'tv-show': true,
   })
-
-  const { data: movieGenres } = useGetMovieGenres()
 
   const { data: movieData, isLoading: isLoadingMovies } = useGetMovie(query)
   const { data: tvShowData, isLoading: isLoadingTVShow } = useGetTVShow(query)
@@ -83,7 +79,6 @@ export function Movies(): ReactElement {
           movieData={movieData}
           tvShowData={tvShowData}
           selected={selected}
-          movieGenres={movieGenres}
         />
         <div className="flex flex-row fill-current text-yellow-400 py-10 justify-around">
           <IconStar width="60px" />

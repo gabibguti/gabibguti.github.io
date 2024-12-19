@@ -11,6 +11,7 @@ module.exports = {
         'dark-forest': '#30362F',
         'olive-green': '#A59132',
         xiketic: '#0D0221',
+        orange: '#DA7422',
       },
       borderRadius: {
         'large': '2rem',

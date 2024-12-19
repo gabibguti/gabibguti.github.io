@@ -1,5 +1,125 @@
 {
   "movies": {
+    "1124": {
+      "title": "The Prestige",
+      "sequence": 1,
+      "time-min": 130,
+      "year": 2006,
+      "genres": ["drama", "mystery", "sci-fi"],
+      "grade-imdb": 8.5,
+      "grade-gabriela": 10,
+      "strong-points": "",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "",
+      "top": true
+    },
+    "1491": {
+      "title": "The Illusionist",
+      "sequence": 1,
+      "time-min": 110,
+      "year": 2006,
+      "genres": ["drama", "mystery", "fantasy"],
+      "grade-imdb": 7.6,
+      "grade-gabriela": 10,
+      "strong-points": "",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "",
+      "top": true
+    },
+    "328425": {
+      "title": "The Gift",
+      "sequence": 1,
+      "time-min": 108,
+      "year": 2015,
+      "genres": ["drama", "mystery", "thriller"],
+      "grade-imdb": 7.0,
+      "grade-gabriela": 10,
+      "strong-points": "",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "",
+      "top": true
+    },
+    "411088": {
+      "title": "The Invisible Guest",
+      "sequence": 1,
+      "time-min": 106,
+      "year": 2016,
+      "genres": ["drama", "mystery", "crime"],
+      "grade-imdb": 8.0,
+      "grade-gabriela": 10,
+      "strong-points": "",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "",
+      "top": true
+    },
+    "27205": {
+      "title": "Inception",
+      "sequence": 1,
+      "time-min": 148,
+      "year": 2010,
+      "genres": ["action", "adventure", "sci-fi"],
+      "grade-imdb": 8.8,
+      "grade-gabriela": 10,
+      "strong-points": "",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "",
+      "top": true
+    },
+    "496243": {
+      "title": "Parasite",
+      "sequence": 1,
+      "time-min": 132,
+      "year": 2019,
+      "genres": ["drama", "thriller"],
+      "grade-imdb": 8.5,
+      "grade-gabriela": 10,
+      "strong-points": "",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "",
+      "top": true
+    },
+    "87516": {
+      "title": "Oldboy",
+      "sequence": 1,
+      "time-min": 104,
+      "year": 2013,
+      "genres": ["drama", "action", "mystery"],
+      "grade-imdb": 5.8,
+      "grade-gabriela": 10,
+      "strong-points": "",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "",
+      "top": true
+    },
+    "745": {
+      "title": "The Sixth Sense",
+      "sequence": 1,
+      "time-min": 107,
+      "year": 1999,
+      "genres": ["drama", "thriller", "mystery"],
+      "grade-imdb": 8.2,
+      "grade-gabriela": 10,
+      "strong-points": "",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "",
+      "top": true
+    },
     "37933": {
       "title": "Tales from Earthsea",
       "sequence": 1,
@@ -413,7 +533,7 @@
       "recommended-by": ["Pedro"],
       "rewatch": false,
       "plataform": "Cinema",
-      "top": true,
+      "top": false,
       "watch-year": 2022
     },
     "453395": {
@@ -541,7 +661,7 @@
       "recommended-by": ["Pedro"],
       "rewatch": false,
       "plataform": "Friend's platform",
-      "top": true,
+      "top": false,
       "watch-year": 2022
     }
   },
@@ -615,7 +735,7 @@
       "recommended-by": ["Anika"],
       "rewatch": false,
       "plataform": "Netflix",
-      "top": true,
+      "top": false,
       "watch-year": 2022
     },
     "208730": {
@@ -651,7 +771,7 @@
       "recommended-by": [],
       "rewatch": false,
       "plataform": "Netflix",
-      "top": true,
+      "top": false,
       "watch-year": 2022
     },
     "31910": {
@@ -781,7 +901,7 @@
       "recommended-by": [],
       "rewatch": false,
       "plataform": "Amazon Prime",
-      "top": true,
+      "top": false,
       "watch-year": 2022
     }
   }
