@@ -7,6 +7,7 @@ import movies2023 from './movies-2023.json'
 import { useGetMovie, useGetMovieGenres, useGetTVShow } from './movieService'
 import { Reviews } from './Reviews'
 import { Search } from './Search'
+import IconStar from '../assets/IconStar'
 
 // export const MOVIES = {
 //   '2023': movies2023,
@@ -29,7 +30,7 @@ export function Movies(): ReactElement {
     'tv-show': true,
   })
 
-  const {data: movieGenres } = useGetMovieGenres()
+  const { data: movieGenres } = useGetMovieGenres()
 
   const { data: movieData, isLoading: isLoadingMovies } = useGetMovie(query)
   const { data: tvShowData, isLoading: isLoadingTVShow } = useGetTVShow(query)
@@ -117,6 +118,13 @@ export function Movies(): ReactElement {
           selected={selected}
           movieGenres={movieGenres}
         />
+        <div className="flex flex-row fill-current text-yellow-400 py-10 justify-around">
+          <IconStar width="60px" />
+          <IconStar width="60px" />
+          <IconStar width="60px" />
+          <IconStar width="60px" />
+          <IconStar width="60px" />
+        </div>
       </div>
     </div>
     // <div className="bg-gradient-to-r from-aero-blue to-light-blue flex flex-col w-screen min-h-screen h-full p-9">
