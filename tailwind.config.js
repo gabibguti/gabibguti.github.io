@@ -10,6 +10,7 @@ module.exports = {
         'moss-green': '#625834',
         'dark-forest': '#30362F',
         'olive-green': '#A59132',
+        xiketic: '#0D0221',
       },
       borderRadius: {
         'large': '2rem',
