@@ -2,8 +2,8 @@ import React, { ReactElement, useEffect, useState } from 'react'
 import { FormattedList } from 'react-intl'
 import Spinner from '../utils/Spinner'
 import { SelectType } from './Chips'
-import { Movie } from './movie'
-import MOVIES from './movies.json'
+import { Movie, TVShow } from './movie'
+import LOCAL_DATABASE from './movies.json'
 import {
   GenreResponse,
   SearchMovie,
@@ -19,25 +19,56 @@ interface ReviewResult {
   poster_path: string | null
   release_date: string | null
   genre_ids: number[]
+  'grade-imdb'?: number
+  'grade-gabriela'?: number
+  'strong-points'?: string | null
+  'weak-points'?: string | null
+  'recommended-by'?: string[] | null
+  rewatch?: boolean
+  top?: boolean
 }
 
-function buildReviewResultFromMovie(value: SearchMovie): ReviewResult {
+function buildReviewResultFromSearchMovie(value: SearchMovie): ReviewResult {
+  const localMovies = LOCAL_DATABASE.movies as { [key: string]: Movie }
+  const review =
+    String(value.id) in localMovies ? localMovies[String(value.id)] : undefined
+
   return {
     id: value.id,
     original_title: value.original_title,
     poster_path: value.poster_path,
     release_date: value.release_date,
     genre_ids: value.genre_ids,
+    'grade-imdb': review?.['grade-imdb'],
+    'grade-gabriela': review?.['grade-gabriela'],
+    'strong-points': review?.['strong-points'],
+    'weak-points': review?.['weak-points'],
+    'recommended-by': review?.['recommended-by'],
+    rewatch: review?.rewatch,
+    top: review?.top,
   }
 }
 
-function buildReviewResultFromTVShow(value: SearchTvShow): ReviewResult {
+function buildReviewResultFromSearchTVShow(value: SearchTvShow): ReviewResult {
+  const localTVShows = LOCAL_DATABASE.tv_shows as { [key: string]: TVShow }
+  const review =
+    String(value.id) in localTVShows
+      ? localTVShows[String(value.id)]
+      : undefined
+
   return {
     id: value.id,
     original_title: value.original_name,
     poster_path: value.poster_path,
     release_date: value.first_air_date,
     genre_ids: value.genre_ids,
+    'grade-imdb': review?.['grade-imdb'],
+    'grade-gabriela': review?.['grade-gabriela'],
+    'strong-points': review?.['strong-points'],
+    'weak-points': review?.['weak-points'],
+    'recommended-by': review?.['recommended-by'],
+    rewatch: review?.rewatch,
+    top: review?.top,
   }
 }
 
@@ -94,24 +125,27 @@ export function ReviewResults({
   movieGenres?: GenreResponse
 }): ReactElement {
   const [results, setResults] = useState<ReviewResult[]>()
-  const myMovies = MOVIES.movies as { [key: string]: Movie }
 
   useEffect(() => {
     let res: ReviewResult[] = []
     if (selected.movie && movieData) {
-      res = [...movieData.results.slice(0, 4).map(buildReviewResultFromMovie)]
+      res = [
+        ...movieData.results.slice(0, 4).map(buildReviewResultFromSearchMovie),
+      ]
     }
     if (selected['tv-show'] && tvShowData) {
       res = [
         ...res,
-        ...tvShowData.results.slice(0, 4).map(buildReviewResultFromTVShow),
+        ...tvShowData.results
+          .slice(0, 4)
+          .map(buildReviewResultFromSearchTVShow),
       ]
     }
     res.sort((a, b) => {
-      if (String(a.id) in myMovies) {
+      if (a['grade-gabriela']) {
         return -1
       }
-      if (String(b.id) in myMovies) {
+      if (b['grade-gabriela']) {
         return 1
       }
       return 0
@@ -129,25 +163,23 @@ export function ReviewResults({
 
   return (
     <div className="grid grid-flow-cols grid-cols-2 gap-6 w-full">
-      {results?.map((movie) => (
-        <MovieDetails movie={movie} movieGenres={movieGenres} />
+      {results?.map((reviewResult) => (
+        <ReviewCard reviewResult={reviewResult} movieGenres={movieGenres} />
       ))}
     </div>
   )
 }
 
-function MovieDetails({
-  movie,
+function ReviewCard({
+  reviewResult,
   movieGenres,
 }: {
-  movie: ReviewResult
+  reviewResult: ReviewResult
   movieGenres?: GenreResponse
 }) {
-  const { data: movieDetails } = useGetMovieDetails(movie.id)
+  const { data: movieDetails } = useGetMovieDetails(reviewResult.id)
 
-  const myMovies = MOVIES.movies as { [key: string]: Movie }
-
-  const genres = movie.genre_ids.reduce<string[]>((acc, genre_id) => {
+  const genres = reviewResult.genre_ids.reduce<string[]>((acc, genre_id) => {
     const g = movieGenres?.genres.find((genre) => genre.id === genre_id)
     if (!g) {
       return acc
@@ -155,7 +187,7 @@ function MovieDetails({
     return [...acc, g.name]
   }, [])
 
-  const isReviewed = movie.id in myMovies
+  const isReviewed = !!reviewResult['grade-gabriela']
 
   return (
     <div className="flex flex-row bg-dark-forest text-white rounded-lg p-5">
@@ -163,14 +195,14 @@ function MovieDetails({
         className={`w-48 h-80 object-cover rounded-lg ${
           isReviewed ? '' : 'filter grayscale'
         }`}
-        alt={movie.original_title + ' poster'}
-        src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`}
+        alt={reviewResult.original_title + ' poster'}
+        src={`https://image.tmdb.org/t/p/w400/${reviewResult.poster_path}`}
       />
       <div className="flex flex-col pl-5 w-full">
         <div className="grid grid-cols-7 gap-2 font-nunito">
           <div className="col-span-8">
             <span className="font-staatliches text-3xl pb-2 text-ellipsis overflow-hidden">
-              {movie.original_title}
+              {reviewResult.original_title}
             </span>
           </div>
           <div className="col-span-8">
@@ -188,8 +220,8 @@ function MovieDetails({
             <div className="flex flex-col">
               <span className="text-xs">Year</span>
               <span>
-                {movie.release_date
-                  ? new Date(movie.release_date).getFullYear()
+                {reviewResult.release_date
+                  ? new Date(reviewResult.release_date).getFullYear()
                   : '-'}
               </span>
             </div>
@@ -208,7 +240,7 @@ function MovieDetails({
                 <div className="flex flex-col">
                   <span className="text-xs font-bold">IMDB Grade</span>
                   <span className="font-bold">
-                    {myMovies[String(movie.id)]?.['grade-imdb']}
+                    {reviewResult?.['grade-imdb']}
                   </span>
                 </div>
               </div>
@@ -216,32 +248,28 @@ function MovieDetails({
                 <div className="flex flex-col">
                   <span className="text-xs font-bold">Gabriela's Grade</span>
                   <span className="font-bold">
-                    {myMovies[String(movie.id)]?.['grade-gabriela']}
+                    {reviewResult?.['grade-gabriela']}
                   </span>
                 </div>
               </div>
               <div className="col-span-1">
                 <div className="flex flex-col">
-                  <span className="text-xs font-bold">Rewatching?</span>
-                  <span>
-                    {myMovies[String(movie.id)]?.rewatch ? 'Yes' : 'No'}
-                  </span>
+                  <span className="text-xs font-bold">Rewatch?</span>
+                  <span>{reviewResult?.rewatch ? 'Yes' : 'No'}</span>
                 </div>
               </div>
               <div className="col-span-7 col-start-1">
                 <div className="flex flex-col">
                   <span className="text-xs font-bold">Strong points</span>
-                  <span>
-                    {myMovies[String(movie.id)]?.['strong-points'] ?? '-'}
-                  </span>
+                  <span>{reviewResult?.['strong-points'] ?? '-'}</span>
                 </div>
               </div>
               <div className="col-span-7 col-start-1">
                 <div className="flex flex-col">
                   <span className="text-xs font-bold">Weak points</span>
                   <span>
-                    {!!myMovies[String(movie.id)]?.['weak-points']
-                      ? myMovies[String(movie.id)]?.['weak-points']
+                    {!!reviewResult?.['weak-points']
+                      ? reviewResult?.['weak-points']
                       : '-'}
                   </span>
                 </div>
@@ -250,14 +278,10 @@ function MovieDetails({
                 <div className="flex flex-col">
                   <span className="text-xs">Recommended by</span>
                   <span className="rounded-md">
-                    {myMovies[String(movie.id)]?.['recommended-by']?.length ? (
+                    {reviewResult?.['recommended-by']?.length ? (
                       <FormattedList
                         type="conjunction"
-                        value={
-                          myMovies[String(movie.id)][
-                            'recommended-by'
-                          ] as string[]
-                        }
+                        value={reviewResult?.['recommended-by'] as string[]}
                       />
                     ) : (
                       '-'
@@ -269,7 +293,7 @@ function MovieDetails({
           )}
         </div>
       </div>
-      {/* <span>{movie.id}</span> */}
+      <span>{reviewResult.id}</span>
     </div>
   )
 }
