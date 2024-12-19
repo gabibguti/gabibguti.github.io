@@ -1,15 +1,45 @@
 import React, { ReactElement, useEffect, useState } from 'react'
+import { FormattedList } from 'react-intl'
 import Spinner from '../utils/Spinner'
 import { SelectType } from './Chips'
+import { Movie } from './movie'
 import MOVIES from './movies.json'
 import {
   GenreResponse,
   SearchMovie,
   SearchMovieResponse,
+  SearchTvShow,
+  SearchTvShowResponse,
   useGetMovieDetails,
 } from './movieService'
-import { Movie } from './movie'
-import { FormattedList } from 'react-intl'
+
+interface ReviewResult {
+  id: number
+  original_title: string
+  poster_path: string | null
+  release_date: string | null
+  genre_ids: number[]
+}
+
+function buildReviewResultFromMovie(value: SearchMovie): ReviewResult {
+  return {
+    id: value.id,
+    original_title: value.original_title,
+    poster_path: value.poster_path,
+    release_date: value.release_date,
+    genre_ids: value.genre_ids,
+  }
+}
+
+function buildReviewResultFromTVShow(value: SearchTvShow): ReviewResult {
+  return {
+    id: value.id,
+    original_title: value.original_name,
+    poster_path: value.poster_path,
+    release_date: value.first_air_date,
+    genre_ids: value.genre_ids,
+  }
+}
 
 export function Reviews({
   emptyQuery,
@@ -22,7 +52,7 @@ export function Reviews({
   emptyQuery: boolean
   isLoading: boolean
   movieData?: SearchMovieResponse
-  tvShowData?: SearchMovieResponse
+  tvShowData?: SearchTvShowResponse
   selected: SelectType
   movieGenres?: GenreResponse
 }): ReactElement {
@@ -59,20 +89,23 @@ export function ReviewResults({
   movieGenres,
 }: {
   movieData?: SearchMovieResponse
-  tvShowData?: SearchMovieResponse
+  tvShowData?: SearchTvShowResponse
   selected: SelectType
   movieGenres?: GenreResponse
 }): ReactElement {
-  const [results, setResults] = useState<SearchMovie[]>()
+  const [results, setResults] = useState<ReviewResult[]>()
   const myMovies = MOVIES.movies as { [key: string]: Movie }
 
   useEffect(() => {
-    let res: SearchMovie[] = []
+    let res: ReviewResult[] = []
     if (selected.movie && movieData) {
-      res = [...movieData.results.slice(0, 4)]
+      res = [...movieData.results.slice(0, 4).map(buildReviewResultFromMovie)]
     }
     if (selected['tv-show'] && tvShowData) {
-      res = [...res, ...tvShowData.results.slice(0, 4)]
+      res = [
+        ...res,
+        ...tvShowData.results.slice(0, 4).map(buildReviewResultFromTVShow),
+      ]
     }
     res.sort((a, b) => {
       if (String(a.id) in myMovies) {
@@ -107,7 +140,7 @@ function MovieDetails({
   movie,
   movieGenres,
 }: {
-  movie: SearchMovie
+  movie: ReviewResult
   movieGenres?: GenreResponse
 }) {
   const { data: movieDetails } = useGetMovieDetails(movie.id)
@@ -127,8 +160,10 @@ function MovieDetails({
   return (
     <div className="flex flex-row bg-dark-forest text-white rounded-lg p-5">
       <img
-        className={`w-48 h-80 object-cover rounded-lg ${isReviewed ? "" : "filter grayscale"}`}
-        alt={movie.title + ' poster'}
+        className={`w-48 h-80 object-cover rounded-lg ${
+          isReviewed ? '' : 'filter grayscale'
+        }`}
+        alt={movie.original_title + ' poster'}
         src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`}
       />
       <div className="flex flex-col pl-5 w-full">
@@ -152,13 +187,19 @@ function MovieDetails({
           <div className="col-span-1 col-start-1">
             <div className="flex flex-col">
               <span className="text-xs">Year</span>
-              <span>{new Date(movie.release_date).getFullYear()}</span>
+              <span>
+                {movie.release_date
+                  ? new Date(movie.release_date).getFullYear()
+                  : '-'}
+              </span>
             </div>
           </div>
           <div className="col-span-2">
             <div className="flex flex-col">
               <span className="text-xs">Runtime</span>
-              <span>{movieDetails?.runtime} min</span>
+              <span>
+                {movieDetails?.runtime ? `${movieDetails?.runtime} min` : '-'}
+              </span>
             </div>
           </div>
           {isReviewed && (
