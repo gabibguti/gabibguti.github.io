@@ -5,7 +5,7 @@ import bestmovies from './best-movies.json'
 import { Chips, SelectType } from './Chips'
 import movies2022 from './movies-2022.json'
 import movies2023 from './movies-2023.json'
-import { useGetMovie, useGetTVShow } from './movieService'
+import { useGetGenres, useGetMovie, useGetMovieGenres, useGetTVShow } from './movieService'
 import { Reviews } from './Reviews'
 import { Search } from './Search'
 
@@ -24,11 +24,13 @@ const DEFAULT_YEAR: YEAR = '2022'
 export function Movies(): ReactElement {
   const params = useParams()
 
-  const [query, setQuery] = useState<string>('')
+  const [query, setQuery] = useState<string>('sherlock')
   const [selected, setSelected] = useState<SelectType>({
     movie: true,
     'tv-show': false,
   })
+
+  const {data: movieGenres } = useGetMovieGenres()
 
   const { data: movieData, isLoading: isLoadingMovies } = useGetMovie(query)
   const { data: tvShowData, isLoading: isLoadingTVShow } = useGetTVShow(query)
@@ -114,6 +116,7 @@ export function Movies(): ReactElement {
           movieData={movieData}
           tvShowData={tvShowData}
           selected={selected}
+          movieGenres={movieGenres}
         />
       </div>
     </div>
