@@ -293,7 +293,6 @@ function ReviewCard({
           )}
         </div>
       </div>
-      <span>{reviewResult.id}</span>
     </div>
   )
 }
