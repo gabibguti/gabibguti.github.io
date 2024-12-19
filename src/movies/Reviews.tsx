@@ -6,13 +6,12 @@ import { Movie, TVShow } from './movie'
 import LOCAL_DATABASE from './movies.json'
 import {
   Genre,
-  GenreResponse,
   MovieDetailsResponse,
   SearchMovieResponse,
   SearchTvShowResponse,
   TvShowDetailsResponse,
   useGetMovieDetails,
-  useGetTVShowDetails
+  useGetTVShowDetails,
 } from './movieService'
 
 interface ReviewResult {
@@ -93,16 +92,12 @@ export function Reviews({
   movieData,
   tvShowData,
   selected,
-  movieGenres,
-  tvShowGenres,
 }: {
   emptyQuery: boolean
   isLoading: boolean
   movieData?: SearchMovieResponse
   tvShowData?: SearchTvShowResponse
   selected: SelectType
-  movieGenres?: GenreResponse
-  tvShowGenres?: GenreResponse
 }): ReactElement {
   if (isLoading) {
     return (
@@ -125,8 +120,6 @@ export function Reviews({
       movieData={movieData}
       tvShowData={tvShowData}
       selected={selected}
-      movieGenres={movieGenres}
-      tvShowGenres={tvShowGenres}
     />
   )
 }
@@ -135,30 +128,42 @@ export function ReviewResults({
   movieData,
   tvShowData,
   selected,
-  movieGenres,
-  tvShowGenres,
 }: {
   movieData?: SearchMovieResponse
   tvShowData?: SearchTvShowResponse
   selected: SelectType
-  movieGenres?: GenreResponse
-  tvShowGenres?: GenreResponse
 }): ReactElement {
+  const { results: movieResults } =
+    movieData ??
+    ({
+      results: [],
+      page: 1,
+      total_results: 0,
+      total_pages: 1,
+    } as SearchMovieResponse)
+  const { results: tvShowResults } =
+    tvShowData ??
+    ({
+      results: [],
+      page: 1,
+      total_results: 0,
+      total_pages: 1,
+    } as SearchTvShowResponse)
   const [results, setResults] = useState<{ id: number; type: Type }[]>()
 
   useEffect(() => {
     let res: { id: number; type: Type }[] = []
-    if (selected.movie && movieData) {
+    if (selected.movie) {
       res = [
-        ...movieData.results
+        ...movieResults
           .slice(0, 4)
           .map((movie) => ({ id: movie.id, type: 'movie' as Type })),
       ]
     }
-    if (selected['tv-show'] && tvShowData) {
+    if (selected['tv-show']) {
       res = [
         ...res,
-        ...tvShowData.results
+        ...tvShowResults
           .slice(0, 4)
           .map((tvShow) => ({ id: tvShow.id, type: 'tv-show' as Type })),
       ]
@@ -173,7 +178,7 @@ export function ReviewResults({
       return 0
     })
     setResults(res)
-  }, [selected, movieData, tvShowData, movieData?.results, tvShowData?.results])
+  }, [selected, movieData, tvShowData, movieResults, tvShowResults])
 
   if (!results || results?.length === 0) {
     return (
@@ -186,25 +191,13 @@ export function ReviewResults({
   return (
     <div className="grid grid-flow-cols grid-cols-2 gap-6 w-full">
       {results?.map((res) => (
-        <ReviewCard
-          result={res}
-          movieGenres={movieGenres}
-          tvShowGenres={tvShowGenres}
-        />
+        <ReviewCard result={res} />
       ))}
     </div>
   )
 }
 
-export function ReviewCard({
-  result,
-  movieGenres,
-  tvShowGenres,
-}: {
-  result: { id: number; type: Type }
-  movieGenres?: GenreResponse
-  tvShowGenres?: GenreResponse
-}) {
+export function ReviewCard({ result }: { result: { id: number; type: Type } }) {
   const [reviewResult, setReviewResult] = useState<ReviewResult>()
 
   const { data: movieDetails } = useGetMovieDetails(result.id)
@@ -220,7 +213,7 @@ export function ReviewCard({
     }
   }, [result, movieDetails, tvShowDetails])
 
-  const genres = reviewResult?.genres.map(genre => genre.name)
+  const genres = reviewResult?.genres.map((genre) => genre.name)
 
   const isReviewed = !!reviewResult?.['grade-gabriela']
 
@@ -263,7 +256,9 @@ export function ReviewCard({
           </div>
           <div className="col-span-2">
             <div className="flex flex-col">
-              <span className="text-xs">{result.type === "movie" ? "Runtime" : "EP Runtime"}</span>
+              <span className="text-xs">
+                {result.type === 'movie' ? 'Runtime' : 'EP Runtime'}
+              </span>
               <span>
                 {reviewResult?.runtime ? `${reviewResult?.runtime} min` : '-'}
               </span>
