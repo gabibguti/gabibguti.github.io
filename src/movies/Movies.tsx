@@ -3,30 +3,29 @@ import { Link, useNavigate, useParams } from 'react-router-dom'
 import IconChevronLeft from '../assets/IconChevronLeft'
 import bestmovies from './best-movies.json'
 import { Chips, SelectType } from './Chips'
-import movies2022 from './movies-2022.json'
 import movies2023 from './movies-2023.json'
 import { useGetMovie, useGetMovieGenres, useGetTVShow } from './movieService'
 import { Reviews } from './Reviews'
 import { Search } from './Search'
 
-export const MOVIES = {
-  '2023': movies2023,
-  '2022': movies2022,
-  All: bestmovies,
-}
+// export const MOVIES = {
+//   '2023': movies2023,
+//   '2022': movies2022,
+//   All: bestmovies,
+// }
 
-export type YEAR = keyof typeof MOVIES
+// export type YEAR = keyof typeof MOVIES
 
-const YEARS: YEAR[] = ['2023', '2022', 'All']
+// const YEARS: YEAR[] = ['2023', '2022', 'All']
 
-const DEFAULT_YEAR: YEAR = '2022'
+// const DEFAULT_YEAR: YEAR = '2022'
 
 export function Movies(): ReactElement {
   const params = useParams()
 
   const [query, setQuery] = useState<string>('')
   const [selected, setSelected] = useState<SelectType>({
-    movie: false,
+    movie: true,
     'tv-show': true,
   })
 
@@ -37,37 +36,37 @@ export function Movies(): ReactElement {
 
   const isLoading = isLoadingMovies || isLoadingTVShow
 
-  const [year, setYear] = useState<YEAR>((params.year as YEAR) ?? DEFAULT_YEAR)
-  const [movies, setMovies] = useState(MOVIES[year])
+  // const [year, setYear] = useState<YEAR>((params.year as YEAR) ?? DEFAULT_YEAR)
+  // const [movies, setMovies] = useState(MOVIES[year])
 
   const navigate = useNavigate()
 
-  useEffect(() => {
-    navigate(`/project/movies/${year}`)
-    setMovies(MOVIES[year])
-  }, [year, navigate])
+  // useEffect(() => {
+  //   navigate(`/project/movies/${year}`)
+  //   setMovies(MOVIES[year])
+  // }, [year, navigate])
 
-  const totalMoviesWatched = movies.movies.length
+  // const totalMoviesWatched = movies.movies.length
 
-  const totalTVShowsWatched = movies.tv_shows.length
+  // const totalTVShowsWatched = movies.tv_shows.length
 
-  const totalMoviesMinWatched = (movies.movies as any).reduce(
-    (totalTime: any, movie: any) => {
-      totalTime += movie['time-min']
-      return totalTime
-    },
-    0
-  )
-  const totalTVShowsMinWatched = (movies.tv_shows as any).reduce(
-    (totalTime: any, TVShow: any) => {
-      totalTime += TVShow['epidodes-watched'] * TVShow['episode-time-min']
-      return totalTime
-    },
-    0
-  )
-  const totalHoursWatched = Math.round(
-    (totalMoviesMinWatched + totalTVShowsMinWatched) / 60
-  )
+  // const totalMoviesMinWatched = (movies.movies as any).reduce(
+  //   (totalTime: any, movie: any) => {
+  //     totalTime += movie['time-min']
+  //     return totalTime
+  //   },
+  //   0
+  // )
+  // const totalTVShowsMinWatched = (movies.tv_shows as any).reduce(
+  //   (totalTime: any, TVShow: any) => {
+  //     totalTime += TVShow['epidodes-watched'] * TVShow['episode-time-min']
+  //     return totalTime
+  //   },
+  //   0
+  // )
+  // const totalHoursWatched = Math.round(
+  //   (totalMoviesMinWatched + totalTVShowsMinWatched) / 60
+  // )
 
   return (
     <div className="flex flex-col w-screen">

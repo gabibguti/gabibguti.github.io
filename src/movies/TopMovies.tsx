@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react'
 import { MoviesTable } from './MoviesTable'
 import { Section } from './Section'
 import { useParams } from 'react-router-dom'
-import { MOVIES, YEAR } from './Movies'
+// import { MOVIES, YEAR } from './Movies'
 
 export function TopMovies(): ReactElement {
   const { year } = useParams()
@@ -10,7 +10,7 @@ export function TopMovies(): ReactElement {
     return <>Error</>
   }
 
-  const movies = MOVIES[year as YEAR]
+  // const movies = MOVIES[year as YEAR]
 
   return (
     <div className="bg-gradient-to-r from-aero-blue to-light-blue flex flex-col w-screen min-h-screen h-full p-9">
