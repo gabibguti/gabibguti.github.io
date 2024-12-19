@@ -238,7 +238,7 @@ function ReviewCard({
             <>
               <div className="col-span-2">
                 <div className="flex flex-col">
-                  <span className="text-xs font-bold">IMDB Grade</span>
+                  <span className="text-xs font-bold">IMDB Rating</span>
                   <span className="font-bold">
                     {reviewResult?.['grade-imdb']}
                   </span>
@@ -246,7 +246,7 @@ function ReviewCard({
               </div>
               <div className="col-span-2">
                 <div className="flex flex-col">
-                  <span className="text-xs font-bold">Gabriela's Grade</span>
+                  <span className="text-xs font-bold">Gabriela's Rating</span>
                   <span className="font-bold">
                     {reviewResult?.['grade-gabriela']}
                   </span>
