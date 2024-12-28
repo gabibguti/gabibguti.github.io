@@ -1,9 +1,9 @@
 export type Movie = {
-  title: string
-  sequence: number
-  'time-min': number
-  year: number
-  genres: string[]
+  title?: string
+  sequence?: number
+  'time-min'?: number
+  year?: number
+  genres?: string[]
   'grade-imdb': number
   'grade-gabriela': number
   'strong-points': string | null
@@ -11,17 +11,16 @@ export type Movie = {
   'recommended-by': string[] | null
   rewatch: boolean
   top?: boolean
-  'tmdb-id'?: number
 }
 
 export type TVShow = {
-  title: string
-  season: number
-  episodes: number
-  'epidodes-watched': number
-  'episode-time-min': number
-  year: number
-  genres: string[]
+  title?: string
+  season?: number
+  episodes?: number
+  'epidodes-watched'?: number
+  'episode-time-min'?: number
+  year?: number
+  genres?: string[]
   'grade-imdb': number
   'grade-gabriela': number
   'strong-points': string | null
@@ -29,5 +28,4 @@ export type TVShow = {
   'recommended-by': string[] | null
   rewatch: boolean
   top?: boolean
-  'tmdb-id'?: number
 }
