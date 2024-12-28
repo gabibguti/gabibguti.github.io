@@ -11,6 +11,7 @@ export type Movie = {
   'recommended-by': string[] | null
   rewatch: boolean
   top?: boolean
+  'watch-year'?: number
 }
 
 export type TVShow = {
@@ -28,4 +29,5 @@ export type TVShow = {
   'recommended-by': string[] | null
   rewatch: boolean
   top?: boolean
+  'watch-year'?: number
 }

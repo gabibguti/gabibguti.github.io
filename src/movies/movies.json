@@ -1,5 +1,16 @@
 {
   "movies": {
+    "1376704": {
+      "title": "Buy Now! The Shopping Conspiracy",
+      "grade-imdb": 6.7,
+      "grade-gabriela": 5,
+      "strong-points": "This is an interesting documentary about our society consuming more and more in the last years. It comments on how fast fashion has increased and we have clothes-trashing cities, accumulating clothes that are both not fastly biodegradable nor reusable. The documentary also interviews americans who worked at large companies and shares how companies are driven by money. Their profit is based on how to make users buy more (not what they need or if they need) regardless of the trash being produced by this fast-eady-buy system.",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "Netflix",
+      "watch-year": 2024
+    },
     "1124": {
       "title": "The Prestige",
       "sequence": 1,

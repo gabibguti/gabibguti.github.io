@@ -26,7 +26,9 @@ export function Movies(): ReactElement {
   const totalMoviesMinWatched = Object.values(
     LOCAL_DATABASE.movies
   ).reduce<number>((totalTime, movie) => {
-    totalTime += movie['time-min']
+    if ('time-min' in movie) {
+      totalTime += movie['time-min']
+    }
     return totalTime
   }, 0)
 
