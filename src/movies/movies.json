@@ -1,5 +1,16 @@
 {
   "movies": {
+    "1360212": {
+      "title": "Ali Wong: Single Lady",
+      "grade-imdb": 6.7,
+      "grade-gabriela": 5.5,
+      "strong-points": "A great entertaining comedy stand-up to watch at home.",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "Netflix",
+      "watch-year": 2024
+    },
     "1376704": {
       "title": "Buy Now! The Shopping Conspiracy",
       "grade-imdb": 6.7,
