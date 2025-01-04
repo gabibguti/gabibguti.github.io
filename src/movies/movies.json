@@ -1,5 +1,16 @@
 {
   "movies": {
+    "961323": {
+      "title": "Nimona",
+      "grade-imdb": 7.5,
+      "grade-gabriela": 5,
+      "strong-points": "A good, well constructed, cute story about accepting differences instead of isolating the differents.",
+      "weak-points": "",
+      "recommended-by": ["Bezerra"],
+      "rewatch": false,
+      "plataform": "Netflix",
+      "watch-year": 2024
+    },
     "1266701": {
       "title": "Hack Your Health: The Secrets of Your Gut",
       "grade-imdb": 6.6,
