@@ -1,5 +1,16 @@
 {
   "movies": {
+    "402431": {
+      "title": "Wicked",
+      "grade-imdb": 7.9,
+      "grade-gabriela": 6,
+      "strong-points": "I loved the performance of the songs, the costume designs, that Ariana and Cythia sang live for this musical and that they were wonderful! A very fun movie to watch.",
+      "weak-points": "",
+      "recommended-by": [],
+      "rewatch": false,
+      "plataform": "Movie Theater",
+      "watch-year": 2024
+    },
     "336843": {
       "title": "The Maze Runner: The Death Cure",
       "grade-imdb": 6.3,
