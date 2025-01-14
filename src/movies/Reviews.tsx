@@ -1,6 +1,6 @@
 import React, { ReactElement, useEffect, useState } from 'react'
 import { FormattedList } from 'react-intl'
-import Spinner from '../utils/Spinner'
+import { Spinner } from '../utils'
 import { SelectType, Type } from './Chips'
 import { Movie, TVShow } from './movie'
 import LOCAL_DATABASE from './movies.json'

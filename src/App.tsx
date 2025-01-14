@@ -52,7 +52,7 @@ export function App(): ReactElement {
               to="/project/movies"
               className="bg-rose text-white py-4 px-6 rounded-full fill-current flex flex-row justify-between"
             >
-              <span>Movies</span>
+              <span>Movie Ratings</span>
               <IconChevronRight />
             </Link>
             <Link

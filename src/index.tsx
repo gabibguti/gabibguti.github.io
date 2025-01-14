@@ -43,15 +43,23 @@ ReactDOM.render(
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Gloock&family=Martian+Mono:wght@100..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100..800&display=swap"
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Gloock&family=Martian+Mono:wght@100..800&family=Staatliches&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap"
         rel="stylesheet"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Gloock&family=Martian+Mono:wght@100..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Staatliches&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet"
       />
     </head>

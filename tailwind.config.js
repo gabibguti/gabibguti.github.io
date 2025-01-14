@@ -12,6 +12,10 @@ module.exports = {
         'olive-green': '#A59132',
         xiketic: '#0D0221',
         orange: '#DA7422',
+        'navy-blue': '#2F4858',
+        'spring-green': '#9EE493',
+        'baby-green': '#DAF7DC',
+        'baby-blue': '#86BBD8',
       },
       borderRadius: {
         'large': '2rem',
@@ -22,6 +26,8 @@ module.exports = {
       'martian-mono': ['Martian Mono', 'monospace'] ,
       staatliches: ['Staatliches', 'serif'],
       nunito: ['Nunito', 'serif'],
+      elsie: ['Elsie', 'serif'],
+      atkinson: ['Atkinson Hyperlegible', 'serif'],
     },
     gradientColorStops: (theme) => ({
       ...theme('colors'),
