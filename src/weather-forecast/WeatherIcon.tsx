@@ -7,15 +7,9 @@ import IconThunderstorm from '../assets/IconThunderstorm'
 
 function WeatherIcon({
   weatherCode,
-  temperature,
 }: {
   weatherCode?: number
-  temperature?: number
 }): ReactElement | null {
-  if (temperature && temperature >= 30) {
-    return <IconFire />
-  }
-
   switch (weatherCode) {
     case 0:
     case 1:

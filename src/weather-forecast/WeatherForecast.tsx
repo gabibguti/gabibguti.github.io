@@ -49,55 +49,34 @@ export function WeatherForecast(): ReactElement {
       </div>
       <div className="bg-xiketic flex flex-col p-5 font-atkinson w-1/3 w-full">
         <SelectLocation city={city} setCity={setCity} />
-        {/* <span className="flex flex-row text-3xl text-xiketic items-center">
-          <span className='fillcurrent'>
-            <IconLocation />
+      </div>
+      <div className="bg-white flex flex-col p-5 font-atkinson text-xiketic w-1/3 w-full">
+        {isLoading ? (
+          <span className="h-60 justify-items-center content-center fill-current text-4xl">
+            <Spinner />
           </span>
-          <select
-            className='ring-moss-green ring-1 rounded-full text-2xl px-6 py-4 pl-16'
-            onChange={(e) => {
-              const selectedCity = e.target.value as keyof typeof cities
-              setCity({ name: selectedCity, ...cities[selectedCity] })
-            }}
-          >
-            {Object.keys(cities).map((name) => (
-              <option value={name} key={name}>
-                {name}
-              </option>
-            ))}
-          </select>
-        </span> */}
+        ) : (
+          <div className="flex flex-col">
+            <div className='flex flex-row pb-5 items-center'>
+            {(data?.currentWeather.weatherCode ||
+              data?.currentWeather.temperature) && (
+              <span className="mr-5">
+                <WeatherIcon
+                  weatherCode={data?.currentWeather.weatherCode}
+                />
+              </span>
+            )}
+            <div className="text-6xl">
+              {data?.currentWeather.temperature}&nbsp;{data?.temperatureUnit}
+            </div>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
+              <div className="bg-blue-600 h-2.5 rounded-full dark:bg-blue-500 w-1/3"></div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
-    //     <span className="flex flex-row font-light text-sm text-xiketic items-center">
-    //       <FormattedDate
-    //         value={data?.currentWeather.time}
-    //         year="numeric"
-    //         month="long"
-    //         day="2-digit"
-    //         hour="numeric"
-    //         minute="numeric"
-    //         hour12={true}
-    //       />
-    //     </span>
-    //     <span className="flex flex-row font-light text-xl text-xiketic items-center pt-6">
-    //       <span className="pr-3">
-    //         <IconLocation />
-    //       </span>
-    //       <select
-    //         onChange={(e) => {
-    //           const selectedCity = e.target.value as keyof typeof cities
-    //           setCity({ name: selectedCity, ...cities[selectedCity] })
-    //         }}
-    //       >
-    //         {Object.keys(cities).map((name) => (
-    //           <option value={name} key={name}>
-    //             {name}
-    //           </option>
-    //         ))}
-    //       </select>
-    //     </span>
-
     //     <div className="flex flex-col h-full min-w-min items-center justify-center">
     //       {isLoading ? (
     //         <Spinner />
