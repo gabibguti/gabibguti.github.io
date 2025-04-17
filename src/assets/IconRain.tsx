@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react'
 
-function IconRain(): ReactElement {
+function IconRain({ width = '24px' }: { width?: string }): ReactElement {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="77" height="68">
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height="auto" viewBox='0 0 77 68'>
       <path
         d="M 2.703 2.986 C 2.375 3.07 1.866 3.261 1.649 3.708 C 1.601 3.808 1.597 3.887 1.616 4.006 C 1.638 4.156 1.771 4.266 1.842 4.342 C 2.118 4.635 2.413 4.828 2.729 4.993 C 3.86 5.58 5.045 5.904 6.239 5.964 C 7.188 6.011 8.18 6.058 9.118 5.787 C 9.764 5.601 10.405 5.36 10.992 4.891 C 11.289 4.654 11.657 4.36 11.852 3.921 C 12.439 2.596 11.133 1.517 10.518 1.086 C 9.35 0.269 8.118 0.06 6.846 0.016 C 6.151 -0.007 5.446 -0.021 4.753 0.091 C 4.08 0.2 3.416 0.42 2.757 0.647 C 1.839 0.964 0.932 1.433 0 1.629"
         transform="translate(21.059 51.058) rotate(30 6 3)"

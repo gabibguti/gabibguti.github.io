@@ -1,8 +1,13 @@
 import React, { ReactElement } from 'react'
 
-function IconSun(): ReactElement {
+function IconSun({ width = '24px' }: { width?: string }): ReactElement {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="87" height="84">
+    <svg
+      width={width}
+      height="auto"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 87 84"
+    >
       <path
         d="M 34.99 41.79 C 34.99 41.79 35.28 35.709 38.472 32.662 C 41.663 29.615 47.756 29.601 47.756 29.809 C 47.756 30.104 51.732 31.3 53.559 33.803 C 55.386 36.306 55.064 40.116 54.72 41.219 C 54.032 43.424 52.785 46.301 52.689 46.353 C 51.233 47.15 49.358 48.992 47.756 49.491 C 45.463 50.206 39.976 49.307 38.472 47.209 C 37.737 46.185 34.863 42.002 34.99 41.79 Z"
         fill="transparent"

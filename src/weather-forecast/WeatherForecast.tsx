@@ -57,110 +57,42 @@ export function WeatherForecast(): ReactElement {
           </span>
         ) : (
           <div className="flex flex-col">
-            <div className='flex flex-row pb-5 items-center'>
-            {(data?.currentWeather.weatherCode ||
-              data?.currentWeather.temperature) && (
-              <span className="mr-5">
-                <WeatherIcon
-                  weatherCode={data?.currentWeather.weatherCode}
-                />
-              </span>
-            )}
-            <div className="text-6xl">
-              {data?.currentWeather.temperature}&nbsp;{data?.temperatureUnit}
+            <div className='flex flex-row pb-10 items-center'>
+              {(data?.currentWeather.weatherCode ||
+                data?.currentWeather.temperature) && (
+                <span className="mr-5">
+                  <WeatherIcon
+                    weatherCode={data?.currentWeather.weatherCode}
+                    width='64px'
+                  />
+                </span>
+              )}
+              <div className="text-6xl">
+                {data?.currentWeather.temperature}&nbsp;{data?.temperatureUnit}
+              </div>
             </div>
-            </div>
-            <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4 dark:bg-gray-700">
-              <div className="bg-blue-600 h-2.5 rounded-full dark:bg-blue-500 w-1/3"></div>
+            <div className="flex flex-row">
+              {data?.nextHoursForecast.map(
+              ({ time, temperature, weatherCode }) => (
+                <div className='flex flex-col mr-5'>
+                  <div className='self-start'><FormattedTime value={time} /></div>
+                  <div className='flex flex-row items-center mt-1'>
+                    <span className="mr-3">
+                      <WeatherIcon
+                        weatherCode={weatherCode}
+                        />
+                    </span>
+                    <div className="text-2xl">
+                      {temperature}&nbsp;{data?.temperatureUnit}
+                    </div>
+                  </div>
+                </div>
+                )
+              )}
             </div>
           </div>
-        )}
+      )}
       </div>
     </div>
-    //     <div className="flex flex-col h-full min-w-min items-center justify-center">
-    //       {isLoading ? (
-    //         <Spinner />
-    //       ) : (
-    //         <>
-    //           <div className="flex flex-col items-center justify-self-center m-auto">
-    //             <span className="flex flex-row font-thin text-xiketic pb-6">
-    //               <span className="text-8xl">
-    //                 {data?.currentWeather.temperature}&nbsp;
-    //                 {data?.temperatureUnit}
-    //               </span>
-    //               {(data?.currentWeather.weatherCode ||
-    //                 data?.currentWeather.temperature) && (
-    //                 <span className="pl-4">
-    //                   <WeatherIcon
-    //                     weatherCode={data?.currentWeather.weatherCode}
-    //                     temperature={data?.currentWeather.temperature}
-    //                   />
-    //                 </span>
-    //               )}
-    //             </span>
-
-    //             <div className="h-8 grid grid-cols-2 grid-flow-col gap-4 font-light text-lg text-xiketic ">
-    //               <div className="flex flex-row items-center justify-center">
-    //                 <span className="pr-3">
-    //                   <IconWind />
-    //                 </span>
-    //                 {data?.currentWeather.windSpeed}&nbsp;
-    //                 <span className="tracking-wider">{windSpeedUnit}</span>
-    //               </div>
-    //               <div className="flex flex-row items-center justify-center tooltip">
-    //                 <span className="pr-3">
-    //                   <IconFryingPan />
-    //                 </span>
-    //                 {data && data?.currentWeather.temperature >= 40
-    //                   ? 'Yes'
-    //                   : 'No'}
-    //                 <span className="tooltiptext">
-    //                   {data && data?.currentWeather.temperature >= 40
-    //                     ? 'Can fry eggs on asfalt today!'
-    //                     : 'Cannot fry eggs on the asfalt today'}
-    //                 </span>
-    //               </div>
-    //             </div>
-    //           </div>
-
-    //           <div className="flex flex-col text-xiketic items-center justify-self-end">
-    //             <span className="text-sm font-semibold uppercase pb-4">
-    //               Next Hours
-    //             </span>
-    //             <table className="table-auto font-light">
-    //               <thead>
-    //                 <tr>
-    //                   <th></th>
-    //                   <th></th>
-    //                   <th></th>
-    //                   <th></th>
-    //                 </tr>
-    //               </thead>
-    //               <tbody>
-    //                 {data?.nextHoursForecast.map(
-    //                   ({ time, temperature, weatherCode }, index) => (
-    //                     <tr key={index}>
-    //                       <td className="text-right">{temperature}</td>
-    //                       <td>{data?.temperatureUnit}</td>
-    //                       <td className="px-4 h-5">
-    //                         <WeatherIcon
-    //                           weatherCode={weatherCode}
-    //                           temperature={temperature}
-    //                         />
-    //                       </td>
-    //                       <td className="text-right">
-    //                         <FormattedTime value={time} />
-    //                       </td>
-    //                     </tr>
-    //                   )
-    //                 )}
-    //               </tbody>
-    //             </table>
-    //           </div>
-    //         </>
-    //       )}
-    //     </div>
-    //   </div>
-    // </div>
   )
 }

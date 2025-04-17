@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 
-function IconStar({ width = '24px' }: { width: string }): ReactElement {
+function IconStar({ width = '24px' }: { width?: string }): ReactElement {
   return (
     <svg
       width={width}
